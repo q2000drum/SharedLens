@@ -1,93 +1,153 @@
-Awesome—here’s a clear, copy-and-go guide to get the ZIP contents into your **decision_matrix** repo and open a PR for Dana to review.
+# SharedLens - Classification & Attribute Management System
 
-[Download the ZIP](sandbox:/mnt/data/decision_matrix_docs.zip)
+A comprehensive enterprise solution for managing product classification schemas and attribute definitions across the product value chain.
 
-# Option A — Command line (recommended)
+## Overview
 
-**Works on Windows, macOS, Linux.**
+SharedLens implements the "Shared Lens Concept" - a strategic framework that eliminates organizational and data silos by integrating Static (Engineering) Attributes and Transactional (Business) Attributes into a unified knowledge base.
 
-1. **Download & extract**
+### Key Features
 
-* **Windows (PowerShell):**
+- **Enterprise Attribute Registry**: Centralized management of all product attributes with governance metadata
+- **Classification Schema Management**: Hierarchical commodity and category classification system
+- **Progress Tracking**: Real-time metrics and dashboards for classification development
+- **Multi-System Integration**: Designed to integrate with PLM (Windchill), ERP (Oracle), PIM, and other enterprise systems
+- **Data Governance**: Built-in data quality rules, audit logging, and stewardship tracking
 
-  ```powershell
-  mkdir $HOME\Downloads\dm_docs
-  Expand-Archive -Path $HOME\Downloads\decision_matrix_docs.zip -DestinationPath $HOME\Downloads\dm_docs -Force
-  ```
-* **macOS/Linux (Terminal):**
+## Tech Stack
 
-  ```bash
-  mkdir -p ~/Downloads/dm_docs
-  unzip ~/Downloads/decision_matrix_docs.zip -d ~/Downloads/dm_docs
-  ```
+- **Framework**: Next.js 16 (App Router) with TypeScript
+- **Styling**: Tailwind CSS + shadcn/ui components
+- **Database**: PostgreSQL with Drizzle ORM
+- **Deployment**: Vercel
+- **Icons**: Lucide React
 
-2. **Go to your local repo**
+## Getting Started
 
+### Prerequisites
+
+- Node.js 20+ and npm
+- PostgreSQL database (local or cloud-hosted)
+
+### Installation
+
+1. Install dependencies:
 ```bash
-cd /path/to/your/decision_matrix
-git fetch origin
-git switch -c doc/add-initial-docs   # or: git checkout -b doc/add-initial-docs
+npm install
 ```
 
-3. **Copy the `/docs` folder into the repo root**
-
-* **Windows (PowerShell, merges folders):**
-
-  ```powershell
-  robocopy $HOME\Downloads\dm_docs\docs .\docs /E
-  ```
-* **macOS/Linux:**
-
-  ```bash
-  rsync -a ~/Downloads/dm_docs/docs/ ./docs/
-  # (or) cp -R ~/Downloads/dm_docs/docs ./   # creates ./docs
-  ```
-
-4. **Review, stage, and commit**
-
+2. Set up environment variables:
 ```bash
-git status
-git add docs
-git commit -m "docs: add initial documentation structure (tools, workflow, glossary)"
+cp .env.example .env.local
 ```
 
-5. **Push & open PR**
-
-```bash
-git push -u origin doc/add-initial-docs
+Edit `.env.local` and add your database connection string:
+```
+DATABASE_URL="postgres://username:password@localhost:5432/sharedlens"
 ```
 
-* Go to GitHub → your repo → you’ll see **“Compare & pull request”**.
-* Title: `docs: seed Decision Matrix documentation`
-* Description: brief summary (what & why).
-* Assign **Dana Nickerson** as reviewer.
-* After approval, **Squash & Merge** → delete branch.
+3. Generate and run database migrations:
+```bash
+npm run db:generate
+npm run db:migrate
+```
 
----
+4. Run the development server:
+```bash
+npm run dev
+```
 
-# Option B — GitHub Desktop (GUI)
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-1. Open **GitHub Desktop** → **File → Open** your `decision_matrix` repo → **Fetch origin**.
-2. **Branch → New Branch…** → name it `doc/add-initial-docs` → **Create branch**.
-3. In **File Explorer/Finder**, open your repo folder and **drag the extracted `docs/` folder** from the ZIP into the repo root.
-4. Back in GitHub Desktop:
+## Deployment to Vercel
 
-   * Verify changed files (the whole `docs/` tree).
-   * **Summary:** `docs: add initial documentation structure`
-   * Click **Commit to doc/add-initial-docs** → **Push origin** → **Create Pull Request**.
-5. On GitHub, assign **Dana** → PR review → **Squash & Merge** → delete branch.
+### Option 1: Deploy via Vercel Dashboard
 
----
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com) and sign in
+3. Click "Add New Project"
+4. Import your GitHub repository
+5. Configure environment variables:
+   - Add `DATABASE_URL` with your PostgreSQL connection string
+6. Click "Deploy"
 
-# Notes & tips
+### Option 2: Deploy via Vercel CLI
 
-* **Existing `docs/`?** If you already have one, this will **merge** new files with the old. Review diffs before committing. If you prefer a clean slate, temporarily rename the old folder to `docs_old/` first.
-* **Repo root, not nested:** Ensure you end up with `decision_matrix/docs/...` (not `decision_matrix/somefolder/docs/...`).
-* **Link from root README (optional):** Add this line to your repo’s top-level `README.md`:
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
 
-  ```markdown
-  📘 Project Documentation lives in [/docs](./docs/).
-  ```
+2. Login to Vercel:
+```bash
+vercel login
+```
 
-If you want, I can also draft the **PR description text** you can paste when opening the pull request.
+3. Deploy:
+```bash
+vercel
+```
 
+### Database Setup for Production
+
+For production deployment, you can use:
+
+- **Vercel Postgres**: Built-in PostgreSQL database
+- **Neon**: Serverless PostgreSQL at [neon.tech](https://neon.tech)
+- **Supabase**: Open-source alternative at [supabase.com](https://supabase.com)
+
+## Project Structure
+
+```
+SharedLens/
+├── app/                          # Next.js App Router pages
+│   ├── page.tsx                  # Dashboard (metrics & overview)
+│   ├── attributes/               # Attribute registry
+│   ├── classification/           # Classification schema
+│   └── settings/                 # System settings
+├── components/
+│   ├── ui/                       # shadcn/ui base components
+│   └── navigation.tsx            # Main navigation
+├── lib/
+│   ├── db/                       # Database configuration
+│   │   ├── schema.ts             # Drizzle ORM schema definitions
+│   │   └── index.ts              # Database client
+│   ├── types/                    # TypeScript type definitions
+│   └── utils.ts                  # Utility functions
+└── docs/                         # Project documentation
+```
+
+## Current Status: POC (v0.1.0)
+
+This is a Proof of Concept implementation with:
+
+- ✅ Core UI components and navigation
+- ✅ Database schema design
+- ✅ Mock data for demonstration
+- ✅ Dashboard with metrics
+- ✅ Attribute registry interface
+- ✅ Classification schema display
+- 🔄 Database integration (in progress)
+- 🔄 External system integration (planned)
+
+## Available Scripts
+
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
+- `npm run db:generate`: Generate database migrations
+- `npm run db:migrate`: Run database migrations
+- `npm run db:studio`: Open Drizzle Studio (database GUI)
+
+## Documentation
+
+See the `docs/` directory for additional documentation:
+
+- `SharedLens.md`: Executive summary and departmental applications
+- `SharedLens-Requirements.md`: Detailed requirements and attribute framework
+- `Data Map.pdf`: System architecture and data flow diagrams
+
+## License
+
+Proprietary - Internal Use Only
