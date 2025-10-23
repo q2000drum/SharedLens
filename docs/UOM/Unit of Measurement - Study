@@ -1,0 +1,3020 @@
+New chat
+Unit of measurement definition from an engineering perspective
+Unit of Measurement - Engineering Definition
+From an engineering perspective, a unit of measurement is a standardized quantity used as a reference for expressing and comparing physical dimensions, properties, or phenomena in a consistent and reproducible manner.
+Key Characteristics
+Standardization: Units must be precisely defined, internationally agreed upon, and traceable to fundamental constants or reproducible phenomena. This ensures measurements are consistent across different locations, instruments, and time periods.
+Quantification: A unit provides the magnitude scale for a physical quantity. Any measurement consists of a numerical value multiplied by its unit (e.g., 5 meters, 220 volts, 3.5 kilograms).
+Dimensional Consistency: Units must maintain dimensional homogeneity in equations and calculations. You cannot add meters to seconds, but you can add meters to kilometers (after conversion).
+Engineering Context
+In engineering practice, units serve several critical functions:
+• Design specifications: Defining tolerances, capacities, and performance parameters
+• Calculations: Ensuring mathematical operations produce physically meaningful results
+• Communication: Providing unambiguous technical information between engineers, manufacturers, and clients
+• Quality control: Establishing measurable criteria for acceptance testing and verification
+• Safety: Setting limits and thresholds for safe operation
+SI System
+Modern engineering predominantly uses the International System of Units (SI), built on seven base units: meter (length), kilogram (mass), second (time), ampere (current), kelvin (temperature), mole (substance), and candela (luminous intensity). All other units are derived from these.
+Engineers must also understand unit conversion, especially when working with legacy systems (imperial units) or specialized fields with customary units (like bar for pressure or horsepower for power).
+From a procurement perspective
+Unit of Measurement - Procurement Definition
+From a procurement perspective, a unit of measurement is a standardized quantity specification that defines how goods or services are counted, priced, ordered, delivered, and invoiced in commercial transactions.
+Key Characteristics
+Commercial Standard: The unit must be clearly understood by both buyer and supplier to avoid disputes. It serves as the basis for pricing, quantity verification, and contract fulfillment.
+Transaction Basis: Units determine how items are bought and sold - whether by piece, weight, volume, length, area, time, or other measures appropriate to the commodity or service.
+Price Reference: The unit of measure directly impacts cost calculations. Price per unit (unit price) allows comparison between suppliers and products.
+Common Procurement Applications
+Physical Goods:
+• Each (EA): Individual items (computers, chairs, machines)
+• Dozen (DZ): Sets of 12
+• Case/Carton (CS): Packaged quantities
+• Kilogram/Pound (KG/LB): Weight-based commodities
+• Liter/Gallon (L/GAL): Liquids and chemicals
+• Meter/Foot (M/FT): Cable, piping, fabric
+• Square meter (M²): Flooring, paneling, land
+Services:
+• Hour (HR): Labor, consulting, equipment rental
+• Day/Month: Extended services or subscriptions
+• Per project/Per job: Fixed-scope deliverables
+Procurement Considerations
+Order Quantity vs. Pricing Unit: Sometimes items are ordered in one unit but priced in another (e.g., ordering cable by the meter but priced per 100 meters).
+Packaging vs. Consumable Unit: The shipping unit (pallets, boxes) may differ from the usable unit (individual pieces inside).
+Unit Conversions: Procurement must manage conversions between supplier units and internal inventory units to ensure accurate ordering and receiving.
+Standardization: Using consistent units across the organization improves purchasing efficiency, reduces errors, and facilitates spend analysis.
+Contract Clarity: Purchase orders and contracts must explicitly state the unit of measure to prevent misunderstandings about quantities and pricing.
+The procurement unit of measure is fundamentally about commercial agreement and transactional clarity rather than technical precision.
+Because they are called the same, UOM does this cause confusion?
+Yes - UOM Ambiguity Causes Significant Confusion
+The fact that "Unit of Measurement" means different things in engineering versus procurement contexts creates substantial practical problems in organizations, especially in manufacturing, construction, and technical service industries.
+Common Confusion Scenarios
+Design vs. Purchase Mismatch
+• Engineering specifies steel plate in millimeters thickness
+• Procurement orders in "sheets" or "kilograms"
+• Result: Wrong quantity delivered or pricing disputes
+Precision vs. Commercial Packaging
+• Engineer needs 47.5 meters of cable
+• Supplier sells cable in 50-meter spools only
+• Procurement must reconcile the technical requirement with commercial reality
+Conversion Errors
+• Engineering drawings show cubic meters
+• Supplier quotes in truckloads or tons
+• Someone must convert, and errors happen frequently
+Inventory Management Issues
+• Engineering BOM (Bill of Materials) lists "meters of pipe"
+• Warehouse stocks "pieces of 6-meter lengths"
+• ERP system struggles to track both simultaneously
+Why This Happens
+Different Objectives:
+• Engineers care about technical accuracy and functional requirements
+• Procurement cares about how suppliers sell and transactional efficiency
+System Integration Challenges: ERP and PLM (Product Lifecycle Management) systems must bridge engineering UOMs and procurement UOMs, often requiring complex conversion tables and dual unit tracking.
+Industry Conventions: Different industries have established commercial trading practices that don't always align with technical measurement systems.
+Real-World Impact
+Organizations experience:
+• Order errors: Wrong quantities purchased
+• Cost overruns: Buying excess due to packaging constraints
+• Project delays: Waiting for clarification on specifications
+• Waste: Disposing of unusable excess material
+• Communication breakdowns: Between technical and commercial teams
+How Organizations Address This
+Dual UOM Systems: Modern ERP systems maintain both "base UOM" (engineering) and "purchase UOM" (procurement) with defined conversion factors.
+Cross-functional Teams: Including both engineers and procurement specialists in specification development.
+Standardized Item Masters: Creating clear definitions that specify both technical and commercial units.
+Clear Documentation: Purchase requisitions that show both "what we need technically" and "how we'll order commercially."
+The confusion is real, costly, and a persistent challenge in technical industries. It requires deliberate organizational processes to manage effectively.
+In the scenario you described about cable, the engineer creates a design part number for the exact length. What does procurement do about defining what to purchase from the supplier
+Procurement's Cable Scenario Solution
+In this scenario, procurement faces a classic make-or-buy unit reconciliation problem. Here's how they typically handle it:
+The Challenge
+• Engineering Part Number: "CABLE-47.5M" (design requirement for exact 47.5 meters)
+• Supplier Reality: Sells cable in 50-meter spools, 100-meter reels, or continuous length from bulk rolls
+• Procurement's Dilemma: How to fulfill the engineering requirement commercially
+Procurement's Response Options
+Option 1: Create a Purchased Part Number
+Most common approach - Procurement creates a separate "purchased item" in the system:
+• Engineering PN: CABLE-47.5M (what's needed in the design)
+• Procurement PN: CABLE-TYPE-X-SPOOL-50M (what's actually bought from supplier)
+• Conversion factor: 1 spool yields 1.05 design parts (with 2.5m waste/scrap)
+The ERP system links these with a "where-used" relationship showing that the purchased spool supplies the design requirement.
+Option 2: Buy by Running Length with Cut-to-Length Service
+Some suppliers offer:
+• Purchase cable "per meter" with minimum order quantities
+• Supplier cuts to exact specified lengths
+• Higher unit price but zero waste
+• Procurement orders "47.5 M" directly
+Option 3: Establish Bulk Material Purchasing
+For high-volume production:
+• Buy cable in bulk reels (500M, 1000M)
+• Warehouse becomes a "manufacturing step" that cuts to length
+• Engineering BOM shows 47.5M required
+• Procurement manages bulk inventory
+• Manufacturing/warehouse issues exact lengths to production
+Option 4: Negotiate Custom Packaging
+For repetitive, high-volume orders:
+• Procurement negotiates with supplier for custom spool lengths
+• Supplier winds cable in 48M or 50M spools specifically for this customer
+• Reduces waste but requires volume commitment
+ERP System Configuration
+Modern systems handle this through:
+Dual UOM Management:
+• Base UOM: Meter (engineering unit)
+• Purchase UOM: Each (spool)
+• Conversion: 1 EA = 50 M
+Item Master Attributes:
+• Minimum order quantity: 1 spool
+• Order multiple: 1 spool
+• Yield factor: 95% (accounting for waste/scrap)
+BOM Structure:
+Assembly XYZ
+  └─ CABLE-TYPE-X: 47.5 M required
+       └─ Purchased from: SUPPLIER-SKU-50M-SPOOL
+The Procurement Decision Process
+1. Analyze usage patterns: Is this one-time or repetitive?
+2. Calculate total cost: (Unit price + waste cost + handling) × volume
+3. Evaluate supplier options: Who offers best commercial terms?
+4. Determine inventory strategy: Stock spools or cut lengths?
+5. Set up system logistics: How to track, issue, and reconcile?
+Communication Back to Engineering
+Procurement typically:
+• Informs engineering of purchasing constraints (50M minimum)
+• Requests design review if waste is significant: "Can you use 50M instead of 47.5M?"
+• Establishes scrap allowances in the BOM (add 5% scrap factor)
+• Negotiates tolerance: "Can we deliver 47.5M ±2.5M?"
+Documentation
+Purchase Order shows:
+• Item: Cable Type X, 50M Spool
+• Quantity: 1 EA
+• Unit Price: $250/spool ($5/meter effective)
+• Reference: For Engineering PN CABLE-47.5M, Project ABC
+The key insight: Procurement creates a translation layer between engineering's technical specification and the supplier's commercial offering, managing the gap through system configuration, process, and sometimes negotiation.
+How do I represent this for the shared lens application
+Representing Cable UOM Scenario in Shared Lens
+To effectively represent this procurement-engineering UOM challenge in your Shared Lens application, you need to capture multiple perspectives viewing the same reality with their different needs and constraints.
+Core Concept: Multi-Perspective Item View
+The cable isn't different objects to different people - it's the same cable viewed through different lenses with different relevant attributes.
+Recommended Representation Structure
+Base Entity: The Cable Itself
+Physical Reality: Cable Type X
+├─ Intrinsic Properties (shared facts)
+│   ├─ Material: Copper conductor, PVC insulation
+│   ├─ Specifications: 18 AWG, 600V rated
+│   ├─ Supplier: ACME Cable Co.
+│   └─ Base Unit: Meter (fundamental measure)
+```
+
+### Lens 1: Engineering View
+```
+Engineering Perspective
+├─ Part Number: CABLE-47.5M
+├─ Required Quantity: 47.5 M
+├─ Unit of Concern: Meter (functional requirement)
+├─ Context: Design BOM for Assembly XYZ
+├─ Tolerance: ±0.1 M (precision matters)
+├─ Concerns:
+│   ├─ Will it fit the assembly?
+│   ├─ Does it meet electrical requirements?
+│   └─ Is length precisely specified?
+└─ Dependencies: Connected to terminals A and B
+```
+
+### Lens 2: Procurement View
+```
+Procurement Perspective
+├─ Supplier SKU: ACME-CABLE-X-50M-SPOOL
+├─ Purchase Quantity: 1 EA (spool)
+├─ Unit of Concern: Each (commercial transaction unit)
+├─ Context: Purchase Order, supplier catalog
+├─ Price: $250 per spool ($5/meter effective)
+├─ Concerns:
+│   ├─ What's the unit price?
+│   ├─ What's the MOQ (minimum order quantity)?
+│   ├─ How is it packaged/shipped?
+│   └─ What's the total cost including waste?
+├─ Lead Time: 2 weeks
+└─ Supplier Terms: Sold in 50M spools only
+```
+
+### Lens 3: Warehouse/Inventory View
+```
+Inventory Perspective
+├─ Stock Keeping Unit: SKU-12345
+├─ Storage Quantity: 2 EA (spools on shelf)
+├─ Available Length: 100 M total (2 × 50M)
+├─ Unit of Concern: Both EA and M (dual tracking)
+├─ Context: Physical storage and issuance
+├─ Concerns:
+│   ├─ How much space does it occupy?
+│   ├─ How do we issue partial spools?
+│   ├─ How do we track remaining length?
+│   └─ What's the scrap/waste?
+└─ Location: Bin A-12-3
+```
+
+### Lens 4: Finance/Costing View
+```
+Finance Perspective
+├─ Cost Element: Material cost for Assembly XYZ
+├─ Standard Cost: $237.50 (47.5M × $5/M)
+├─ Actual Cost: $250 (must buy full spool)
+├─ Unit of Concern: Currency per functional unit
+├─ Context: Product costing, variance analysis
+├─ Concerns:
+│   ├─ What's the actual cost per assembly?
+│   ├─ How do we allocate the $12.50 waste?
+│   ├─ Material utilization efficiency?
+│   └─ Budget vs. actual variance
+└─ Scrap Allowance: $12.50 (2.5M unused)
+```
+
+## Key Relationships to Model
+### 1. **Conversion/Translation Layer**
+```
+Engineering → Procurement Translation
+Input: 47.5 M required
+Rules:
+  - Supplier sells in 50M spools only
+  - Cannot split spools
+  - Round up to next whole spool
+Output: Order 1 EA (50M spool)
+Consequence: 2.5M waste/scrap
+```
+
+### 2. **Conflict/Tension Points** (Critical for Shared Lens!)
+```
+Tension: Precision vs. Packaging
+├─ Engineering needs: Exactly 47.5M
+├─ Procurement constraint: Only available in 50M
+├─ Impact: 5% material waste
+├─ Cost: $12.50 excess per assembly
+└─ Resolution Options:
+    ├─ Accept waste and allocate cost
+    ├─ Redesign to use 50M
+    ├─ Find alternate supplier with cut-to-length
+    └─ Stock 50M spools and manage remnants
+```
+
+### 3. **Context Switching**
+Show how the **same inquiry** gets different answers:
+**Question: "How much cable do we have?"**
+- Engineering: "Enough for 2.1 assemblies" (100M ÷ 47.5M)
+- Procurement: "2 spools"
+- Warehouse: "100 meters in inventory"
+- Finance: "$500 of cable inventory"
+## UI/Visualization Suggestions
+### Unified Item Card with Perspective Tabs
+```
+┌─────────────────────────────────────────┐
+│ Cable Type X - 18 AWG                   │
+├─────────────────────────────────────────┤
+│ [Engineering] [Procurement] [Inventory] │
+├─────────────────────────────────────────┤
+│ Engineering View Active:                │
+│ • Required: 47.5 M                      │
+│ • Part Number: CABLE-47.5M              │
+│ • Tolerance: ±0.1 M                     │
+│                                         │
+│ ⚠️ Procurement Alert:                   │
+│ Supplier sells in 50M spools            │
+│ → 2.5M waste per order                  │
+│ [View Procurement Details →]            │
+└─────────────────────────────────────────┘
+```
+
+### Relationship Visualization
+```
+Engineering PN ←→ Procurement SKU
+  CABLE-47.5M      ACME-50M-SPOOL
+       ↓                ↓
+    Requires        Supplies
+    47.5 M           50 M
+       ↓                ↓
+       └─── 2.5M Waste ──┘
+```
+
+### Perspective Comparison View
+Side-by-side table showing how each lens sees the same attributes:
+| Attribute | Engineering | Procurement | Inventory |
+|-----------|-------------|-------------|-----------|
+| Identity | CABLE-47.5M | ACME-50M-SPOOL | SKU-12345 |
+| Quantity Unit | Meters | Each (spools) | Both |
+| Key Metric | 47.5 M needed | $250/spool | 2 EA in stock |
+| Main Concern | Fits design? | Best price? | Have enough? |
+## Data Model Considerations
+### Entity Structure
+```
+Item {
+  id: "cable-type-x-instance"
+  canonical_name: "Cable Type X, 18 AWG"
+  
+  perspectives: [
+    {
+      lens: "engineering"
+      part_number: "CABLE-47.5M"
+      uom: "M"
+      quantity: 47.5
+      attributes: {...}
+    },
+    {
+      lens: "procurement"
+      supplier_sku: "ACME-50M-SPOOL"
+      uom: "EA"
+      quantity: 1
+      unit_price: 250
+      attributes: {...}
+    }
+  ]
+  
+  conversions: [
+    {
+      from_lens: "engineering"
+      to_lens: "procurement"
+      rule: "round_up_to_spool"
+      factor: 50
+      waste_factor: 0.05
+    }
+  ]
+  
+  tensions: [
+    {
+      type: "unit_mismatch"
+      between: ["engineering", "procurement"]
+      description: "Exact length needed vs. spool packaging"
+      impact: "$12.50 waste per unit"
+      resolution_options: [...]
+    }
+  ]
+}
+Interactive Features to Consider
+1. Lens Switching Animation: Smoothly transition between perspectives showing what changes and what stays the same
+2. Tension Highlighter: Visually flag where perspectives conflict or create friction
+3. Cost Impact Calculator: Show real-time cost implications of UOM mismatches
+4. "What If" Scenarios:
+• "What if we redesigned to use 50M?"
+• "What if supplier offered cut-to-length?"
+• "What if we ordered 100M spools instead?"
+5. Conversation Thread: Show historical decisions about how this tension was resolved
+6. Stakeholder Notifications: Alert engineering when procurement finds packaging constraints
+Key Insight for Shared Lens
+The power of your application should be showing that this isn't a communication problem between departments - it's an inherent complexity where the same physical reality must be described differently based on the context of use. The UOM "confusion" isn't a bug - it's a feature of how different professional domains interact with shared resources.
+Your app should make these translations visible and manageable rather than trying to force a single "correct" view.
+I guess a worse case scenario would be if the engineer needed 52.5M for each design
+The 52.5M Nightmare Scenario
+You've identified a critical edge case that exposes the full complexity of UOM conflicts. This is where the system breaks down and forces difficult decisions.
+The Problem
+Engineering Requirement: 52.5 M per assembly Supplier Reality: Sells in 50M spools only
+Mathematical Crisis:
+• Need: 52.5 M
+• Buy 1 spool: 50 M (SHORT by 2.5M - doesn't work)
+• Buy 2 spools: 100 M (excess 47.5M - 95% waste)
+This creates a forced choice scenario with no good options.
+Real-World Response Paths
+Path 1: Engineering Design Change (Most Common)
+Procurement escalates back to Engineering:
+"We have a problem. Your design needs 52.5M, but cable only comes in 50M spools. Options:
+• Redesign to use ≤50M, OR
+• Accept 100M purchase cost (doubles material cost)"
+Engineering must decide:
+• Can we shorten the cable run? (routing optimization)
+• Can we use a junction/splice at 50M? (adds complexity, cost)
+• Is there technical flexibility in the 52.5M requirement?
+• What's the tolerance? Could 50M actually work?
+Likely outcome: Engineering redesigns to 49.5M, staying within one spool.
+Path 2: Find Alternative Supplier
+Procurement searches for:
+• Suppliers offering cut-to-length service
+• Bulk cable suppliers (buy 100M+ rolls, cut in-house)
+• Different packaging options (some offer 25M, 75M, 100M reels)
+• Custom order arrangements for volume customers
+Trade-offs: Usually higher unit cost, longer lead times, minimum order quantities.
+Path 3: Accept Massive Waste (Rare)
+For low-volume, high-value assemblies:
+• Buy 2 spools (100M) per assembly
+• Use 52.5M, waste 47.5M
+• Cost the waste into the product
+When this happens:
+• Aerospace/defense with cost-plus contracts
+• Prototype/R&D phases
+• Emergency/rush orders
+• No viable alternatives exist
+Path 4: Create Assembly Process Workaround
+Engineering solution that splits the requirement:
+• Use 50M cable as primary run
+• Use separate 2.5M jumper cable (different part)
+• Add splice/connector to BOM
+• Increases assembly complexity and labor
+New BOM:
+Assembly XYZ
+├─ Cable Type X (main run): 50 M
+├─ Cable Type X (jumper): 2.5 M (from remnants or small spool)
+└─ Splice connector: 1 EA
+```
+
+### Path 5: Inventory Management Solution
+**Warehouse becomes a fabrication step:**
+- Buy cable in bulk rolls (500M)
+- Cut to length in-house (52.5M pieces)
+- Track as "make" item not "buy" item
+**Requires:**
+- Cable cutting equipment
+- Quality control for length verification
+- Labor for cutting/preparation
+- Storage for bulk rolls and cut pieces
+## How This Escalates in Organizations
+### Stage 1: Discovery (Procurement)
+```
+Procurement: "I can't order 52.5M. Supplier only has 50M spools."
+```
+### Stage 2: Impact Analysis
+```
+Cost Impact:
+- Option A (2 spools): $500 for 100M = $9.52/M effective (95% waste)
+- Option B (cut-to-length): $8.50/M = $446.25 (66% premium per meter)
+- Option C (redesign to 50M): $250 for 50M = $5/M (design cost + delay)
+Lead Time Impact:
+- Spools: 2 weeks
+- Cut-to-length: 6 weeks
+- Redesign cycle: 2-4 weeks
+Production Impact:
+- Current: 10 assemblies/week needed
+- Waste scenario: $5,000/week excess material cost
+- Annual waste: $260,000
+```
+### Stage 3: Cross-Functional Meeting
+**Attendees**: Engineering, Procurement, Manufacturing, Finance, Project Management
+**Discussion Points:**
+- Can design be modified? (Engineering)
+- What's the cost impact? (Finance)
+- Can we delay? (Project Management)
+- Can we absorb the waste? (Finance/Manufacturing)
+- What about suppliers B, C, D? (Procurement)
+### Stage 4: Decision & Documentation
+**Final Decision** (example):
+"Engineering will redesign cable routing to 49.8M, maintaining 0.2M safety margin. Procurement will order 50M spools. Estimated redesign time: 1 week. Delays production start by 1 week but saves $260K annually."
+**Engineering Change Order (ECO)** issued:
+- Old design: 52.5M cable
+- New design: 49.8M cable
+- Reason: Supplier packaging constraints, cost optimization
+- Impact: All drawings, BOMs, test procedures updated
+## Shared Lens Application Representation
+### Critical Alert Status
+```
+┌─────────────────────────────────────────────────┐
+│ ⛔ CRITICAL: UOM Conflict - No Direct Solution  │
+├─────────────────────────────────────────────────┤
+│ Cable Type X - Assembly XYZ                     │
+│                                                 │
+│ Engineering Needs: 52.5 M                       │
+│ Supplier Provides: 50 M spools only             │
+│                                                 │
+│ ❌ Cannot fulfill as specified                  │
+│                                                 │
+│ Impact: Blocks production                       │
+│ Severity: High - Requires decision              │
+│ Status: Escalated to design review              │
+└─────────────────────────────────────────────────┘
+```
+
+### Decision Tree Visualization
+```
+Need: 52.5 M Cable
+    ↓
+    ├─→ [Option 1] Redesign to ≤50M
+    │   Cost: Design time (~$5K)
+    │   Time: 1-2 weeks delay
+    │   Ongoing: $0 waste
+    │   ✓ Best long-term
+    │
+    ├─→ [Option 2] Buy 2 spools (100M)
+    │   Cost: $500/unit (+100%)
+    │   Time: No delay
+    │   Ongoing: $250/unit waste
+    │   ⚠️ Expensive ongoing
+    │
+    ├─→ [Option 3] Cut-to-length service
+    │   Cost: $446/unit (+78%)
+    │   Time: 4 week lead time
+    │   Ongoing: $196/unit premium
+    │   ⚠️ Supplier dependent
+    │
+    ├─→ [Option 4] Use splice/connector
+    │   Cost: +$30/unit (connector + labor)
+    │   Time: 1 week redesign
+    │   Ongoing: Complexity + reliability risk
+    │   ⚠️ Engineering compromise
+    │
+    └─→ [Option 5] In-house cutting
+        Cost: $15K equipment + labor
+        Time: 3 week setup
+        Ongoing: Labor + QC cost
+        ⚠️ Only viable at volume
+```
+
+### Stakeholder Impact View
+```
+Engineering: 
+  ⚠️ Design change required OR accept compromise
+  Action needed: Review 52.5M requirement
+
+Procurement:
+  🛑 Cannot place order as specified
+  Blocked: Waiting engineering decision
+
+Manufacturing:
+  ⏸️ Production delayed
+  Impact: 1-4 weeks depending on decision
+
+Finance:
+  💰 Waste cost: $250/unit ongoing OR
+  💰 One-time redesign: $5K
+  Recommendation: Redesign = 20 unit payback
+
+Project Management:
+  📅 Schedule impact: 1-4 weeks
+  Risk: High - critical path item
+```
+
+### Tension Visualization (Key for Shared Lens!)
+```
+┌──────────────────────────────────────────┐
+│     IRRECONCILABLE CONFLICT ZONE         │
+├──────────────────────────────────────────┤
+│                                          │
+│   Engineering Reality                    │
+│   ╔════════════════╗                     │
+│   ║  Need: 52.5 M  ║                     │
+│   ╚════════════════╝                     │
+│          ↕ GAP                           │
+│   ╔════════════════╗                     │
+│   ║  Have: 50 M    ║                     │
+│   ╚════════════════╝                     │
+│   Procurement Reality                    │
+│                                          │
+│ This gap CANNOT be bridged by:          │
+│ • Better communication                   │
+│ • Process improvement                    │
+│ • System configuration                   │
+│                                          │
+│ Requires: Strategic decision             │
+│           Change to requirements OR      │
+│           Change to sourcing             │
+└──────────────────────────────────────────┘
+```
+
+### Historical Decision Tracking
+```
+Item: Cable Type X
+Decision History:
+[2025-10-15] Initial Design
+  └─ Engineering specified: 52.5M
+  └─ Rationale: Physical distance A to B
+
+[2025-10-18] Procurement Review
+  └─ Identified: Packaging constraint (50M max)
+  └─ Escalated: To design review
+
+[2025-10-20] Design Review Meeting
+  └─ Attendees: Eng (J.Smith), Proc (M.Chen), PM (R.Patel)
+  └─ Options evaluated: 5 alternatives
+  └─ Decision: Redesign to 49.8M
+  └─ Rationale: Cost avoidance ($260K annual)
+  └─ Trade-off: 1 week schedule delay acceptable
+
+[2025-10-21] ECO-2847 Approved
+  └─ Changed: 52.5M → 49.8M
+  └─ Implementation: Updated all documentation
+```
+
+### Conversation Thread
+```
+💬 Discussion Thread: Cable Length Conflict
+
+[Procurement - M.Chen] @Engineering
+"Can't source 52.5M. Supplier max is 50M spools. 
+Need guidance."
+[Engineering - J.Smith]
+"This is the measured distance. Can we review 
+alternative routing?"
+[Manufacturing - K.Williams]
+"We could use a connector at 50M if that helps?"
+[Engineering - J.Smith]
+"Connector adds failure point. Let me check if we 
+can reroute through the lower channel instead."
+[Engineering - J.Smith] 2 hours later
+"Good news - lower channel routing = 49.8M. 
+Preparing ECO now."
+[Project Mgmt - R.Patel]
+"Will this delay cause schedule impact?"
+[Engineering - J.Smith]
+"1 week for drawing updates. But saves $260K/year 
+in material waste. Worth it."
+[Finance - A.Kumar]
+"Approved from finance. ROI in <1 month of production."
+✅ Resolution: Redesign approved
+Key Insight for Shared Lens
+This scenario demonstrates that sometimes there is no translation - there's an actual incompatibility between perspectives that requires systemic change, not just better communication or data mapping.
+Your application should:
+1. Detect impossible conflicts (mathematical impossibilities, not just mismatches)
+2. Escalate appropriately (flag as decision-required, not just information)
+3. Present options with consequences (decision support, not just data)
+4. Track resolution history (organizational learning)
+5. Show the human collaboration (this is where engineering meets business reality)
+The 52.5M scenario is where Shared Lens proves its value - not by solving the problem, but by making the problem visible to all stakeholders simultaneously with clarity about why it can't be solved through normal channels.
+This is the difference between a data integration tool and a collaborative sense-making platform.
+How would engineering document the parts length and define the UOM
+Engineering Documentation of Cable Length and UOM
+Formal Engineering Documentation Methods
+1. Engineering Drawing (Most Authoritative)
+┌─────────────────────────────────────────────────┐
+│  DRAWING NO: EE-12345-001  REV: B               │
+│  TITLE: CABLE ASSEMBLY - POWER DISTRIBUTION     │
+│  SCALE: NTS (Not To Scale)                      │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  ITEM 3: CABLE, 18 AWG, TYPE X                  │
+│                                                 │
+│  ┌────────────────────────────────────┐         │
+│  │  ←──────── 47.5 ± 0.1 ──────────→ │         │
+│  └────────────────────────────────────┘         │
+│                                                 │
+│  DIMENSIONS IN: METERS                          │
+│  UNLESS OTHERWISE SPECIFIED                     │
+│                                                 │
+│  NOTES:                                         │
+│  1. LENGTH MEASURED ALONG CENTERLINE            │
+│  2. DIMENSION INCLUDES TERMINAL CRIMPS          │
+│  3. CUT LENGTH TOLERANCE: ±100mm                │
+│  4. REFER TO SPEC: EE-SPEC-CABLE-001           │
+└─────────────────────────────────────────────────┘
+```
+
+**Key Elements:**
+- **Dimension with tolerance**: 47.5 ± 0.1 M
+- **Unit declaration**: "DIMENSIONS IN: METERS"
+- **Measurement reference**: How length is measured
+- **Tolerance class**: Precision requirements
+### 2. **Bill of Materials (BOM)**
+#### Tabular Format (Traditional)
+```
+┌──────┬─────────────┬───────────────────┬─────┬──────┬─────────┐
+│ ITEM │ PART NUMBER │ DESCRIPTION       │ QTY │ UOM  │ NOTES   │
+├──────┼─────────────┼───────────────────┼─────┼──────┼─────────┤
+│  1   │ ASSY-001    │ MAIN ASSEMBLY     │  1  │ EA   │         │
+│  2   │ PCB-100     │ CONTROL BOARD     │  1  │ EA   │         │
+│  3   │ CABLE-47.5M │ CABLE, 18AWG, X   │ 47.5│ M    │ NOTE 1  │
+│  4   │ TERM-A      │ CRIMP TERMINAL    │  2  │ EA   │         │
+│  5   │ CONN-B      │ CONNECTOR         │  2  │ EA   │         │
+└──────┴─────────────┴───────────────────┴─────┴──────┴─────────┘
+
+NOTES:
+1. Cable length is functional requirement. See drawing EE-12345-001
+   for routing details and tolerance.
+```
+**Critical BOM Fields:**
+- **QTY**: 47.5 (decimal precision allowed)
+- **UOM**: M (meter) - standardized abbreviation
+- **Part Number**: CABLE-47.5M (encodes length in PN)
+- **Reference**: Points to authoritative drawing
+#### Hierarchical BOM (Indented)
+```
+ASSEMBLY: ASSY-001 (Main Power Assembly)
+  QTY: 1 EA
+  │
+  ├─ ITEM 001: PCB-100 (Control Board)
+  │   QTY: 1 EA
+  │
+  ├─ ITEM 002: CABLE-47.5M (Cable Assembly)
+  │   QTY: 47.5 M                    ← Engineering quantity
+  │   UOM: M (Meter)                 ← Engineering unit
+  │   TYPE: Make (fabricated)        ← Indicates assembly required
+  │   │
+  │   ├─ CHILD: CABLE-TYPE-X-RAW
+  │   │   QTY: 47.5 M
+  │   │   UOM: M
+  │   │   TYPE: Buy (purchased)      ← What procurement orders
+  │   │
+  │   ├─ CHILD: TERM-A (Terminal)
+  │   │   QTY: 2 EA
+  │   │
+  │   └─ CHILD: CONN-B (Connector)
+  │       QTY: 2 EA
+```
+
+### 3. **Part Number Definition (Item Master Record)**
+```
+PART NUMBER: CABLE-47.5M
+─────────────────────────────────────────────────
+DESCRIPTION: Cable Assembly, 18 AWG, Type X, 47.5M
+
+PART TYPE: Make/Assembly (fabricated from raw cable)
+ENGINEERING ATTRIBUTES:
+├─ Base UOM: M (Meter)
+├─ Decimal Places: 1
+├─ Standard Quantity: 47.5 M
+├─ Tolerance: ± 0.1 M (±2mm)
+├─ Measurement Method: Centerline, installed length
+└─ Specification: EE-SPEC-CABLE-001 Rev C
+
+PHYSICAL ATTRIBUTES:
+├─ Conductor: 18 AWG copper
+├─ Insulation: PVC, 600V rated
+├─ Color: Black
+├─ Weight: 0.035 kg/m (1.66 kg total)
+└─ Flexibility: Standard bend radius 50mm
+
+FUNCTIONAL REQUIREMENTS:
+├─ Voltage Rating: 600V AC/DC
+├─ Current Rating: 10A continuous
+├─ Temperature Range: -20°C to +80°C
+└─ Application: Power distribution, indoor
+
+REFERENCES:
+├─ Drawing: EE-12345-001 Rev B
+├─ Specification: EE-SPEC-CABLE-001 Rev C
+├─ Standard: UL 1007 / IEC 60227
+└─ Material Spec: MAT-CABLE-TYPE-X
+
+CONFIGURATION CONTROL:
+├─ Created: 2024-03-15 by J.Smith (Engineering)
+├─ Last Modified: 2024-08-22 by R.Johnson (ECO-2847)
+└─ Status: Released for Production
+```
+
+### 4. **Engineering Specification Document**
+```
+SPECIFICATION: EE-SPEC-CABLE-001
+TITLE: Cable Assemblies - General Requirements
+REV: C    DATE: 2024-08-22
+─────────────────────────────────────────────────
+
+3.2 LENGTH SPECIFICATION
+3.2.1 Unit of Measure
+All cable lengths shall be specified in METERS (m) unless
+otherwise noted on the drawing.
+3.2.2 Measurement Method
+Length shall be measured along the cable centerline in the
+installed configuration, including:
+  a) Straight sections
+  b) Bend radii (measured along centerline)
+  c) Terminal crimps (from crimp to crimp)
+Excluded from measurement:
+  a) Connector bodies
+  b) Strain relief boots
+  c) Labels and identification
+3.2.3 Tolerance Classes
+┌───────────┬────────────┬─────────────────┐
+│   Class   │ Tolerance  │   Application   │
+├───────────┼────────────┼─────────────────┤
+│     A     │   ± 1mm    │ Critical length │
+│     B     │  ± 10mm    │ Standard        │
+│     C     │  ± 50mm    │ Non-critical    │
+└───────────┴────────────┴─────────────────┘
+
+Default: Class B unless specified otherwise
+3.2.4 Documentation Requirements
+All cable lengths > 1.0m shall:
+  - Be specified to 1 decimal place (e.g., 47.5 M)
+  - Include tolerance on drawing
+  - Reference this specification
+```
+### 5. **CAD/PLM System Attributes**
+#### PLM Item Record
+```
+ITEM: CABLE-47.5M
+─────────────────────────────────────────────────
+
+GENERAL:
+  Item Type: Assembly (Make)
+  Classification: Cable Assembly > Power Cable
+  Lifecycle State: Released
+ENGINEERING DATA:
+  Primary UOM: M          ← Engineering unit of measure
+  Decimal Precision: 1    ← Allows 47.5
+  Issue Quantity: 47.5    ← Design requirement
+  Issue UOM: M            ← How issued to production
+  Scrap Factor: 2%        ← Expected waste in fabrication
+
+PROCUREMENT DATA (linked items):
+  Purchase From: CABLE-TYPE-X-SPOOL-50M
+  Purchase UOM: EA        ← Commercial unit
+  Purchase Qty: 1         ← Order 1 spool
+  Conversion: 1 EA = 50 M
+  Yield: 47.5 M per 50 M spool (95% utilization)
+
+MANUFACTURING DATA:
+  Make/Buy: Make          ← Fabricated in-house
+  Process: Cut to length, crimp terminals
+  Work Center: Cable Prep Station
+  Cycle Time: 15 minutes
+  Setup Time: 5 minutes
+
+WHERE-USED:
+  Parent: ASSY-001 (Main Power Assembly)
+  Quantity Required: 47.5 M per assembly
+```
+### 6. **UOM Definition Standards**
+Engineering typically follows ISO or ANSI standards for UOM:
+```
+STANDARD UNIT CODES (Engineering)
+─────────────────────────────────────────────────
+
+LENGTH:
+  M  = Meter (SI base unit)
+  MM = Millimeter (10^-3 m)
+  CM = Centimeter (10^-2 m)
+  KM = Kilometer (10^3 m)
+  
+  IN = Inch (25.4 mm) - where imperial required
+  FT = Foot (0.3048 m)
+AREA:
+  M2 = Square meter
+  MM2 = Square millimeter
+VOLUME:
+  M3 = Cubic meter
+  L  = Liter
+MASS:
+  KG = Kilogram
+  G  = Gram
+  MG = Milligram
+COUNT:
+  EA = Each (discrete items)
+  PC = Piece (alternative to EA)
+  SET = Set (grouped items)
+USAGE RULES:
+1. Use SI units as primary standard
+2. Allow imperial as secondary (in parentheses)
+3. Never mix units within same dimension
+4. Always specify UOM explicitly in BOM
+5. Define conversion factors in item master
+```
+## Engineering UOM Definition Best Practices
+### Part Number Encoding
+Engineers often encode key parameters in part numbers:
+**Systematic Approach:**
+```
+CABLE-TYPE-LENGTH-GAUGE
+  │     │     │      │
+  │     │     │      └─ Wire gauge (18)
+  │     │     └──────── Length in meters (47.5M)
+  │     └────────────── Cable type identifier (X)
+  └──────────────────── Category (CABLE)
+
+Example: CABLE-X-47.5M-18AWG
+Alternatively:
+CABLE-47.5M (if type/gauge in description)
+```
+**Advantages:**
+- Length immediately visible
+- Easy to search/filter
+- Prevents duplicate definitions
+- Self-documenting
+**Disadvantages:**
+- Creates proliferation of part numbers
+- Every length needs unique PN
+- Harder to manage changes
+### Tolerance Documentation
+Engineers must specify **how precise** the length needs to be:
+```
+DIMENSION FORMATS:
+Tight tolerance (precision critical):
+  47.50 ± 0.05 M    (50mm tolerance)
+  
+Standard tolerance (typical):
+  47.5 ± 0.1 M      (100mm tolerance)
+  
+Loose tolerance (non-critical):
+  47.5 ± 0.5 M      (500mm tolerance)
+  
+Reference dimension (information only):
+  (47.5) M          (not for manufacturing)
+  
+Maximum/minimum limits:
+  47.5 MAX M        (cannot exceed)
+  47.5 MIN M        (cannot be less)
+```
+### Measurement Reference Points
+Critical for cables - **where do you measure from?**
+```
+CABLE LENGTH DEFINITION METHODS:
+Method 1: End-to-End (Physical)
+  ├──────────────────────────┤
+  │                          │
+ [A]    Cable body          [B]
+  
+  Length = Physical cable from point A to B
+  Excludes: connectors, terminals
+
+Method 2: Installed Length (Functional)
+  ┌─────────────────────────────┐
+  │        Route path           │
+  │    ╭───────────────╮        │
+  │    │               │        │
+  └────┴───────────────┴────────┘
+  
+  Length = Centerline path in installed position
+  Includes: bends, routing, sag
+
+Method 3: Cut Length (Manufacturing)
+  Extra ←─────────────────→ Extra
+        │                 │
+       [A]   Cable       [B]
+  
+  Length = Raw cable before assembly
+  Includes: extra for crimping, stripping
+
+SPECIFICATION MUST CLARIFY WHICH METHOD!
+```
+## Common Engineering Mistakes with UOM
+### Mistake 1: Ambiguous UOM
+```
+❌ BAD:
+ITEM: Cable
+QTY: 47.5
+UOM: (blank)
+
+✓ GOOD:
+ITEM: Cable Type X
+QTY: 47.5
+UOM: M (Meter)
+```
+
+### Mistake 2: Mixing Units
+```
+❌ BAD:
+Cable: 47.5 M
+Wire: 18 inches
+Tubing: 2 feet
+
+✓ GOOD:
+Cable: 47.5 M
+Wire: 0.457 M (18 inches)
+Tubing: 0.610 M (2 feet)
+```
+
+### Mistake 3: Insufficient Precision
+```
+❌ BAD:
+QTY: 48 M  (rounded from 47.5)
+
+✓ GOOD:
+QTY: 47.5 M  (actual requirement)
+```
+
+### Mistake 4: No Tolerance
+```
+❌ BAD:
+Length: 47.5 M
+
+✓ GOOD:
+Length: 47.5 ± 0.1 M
+```
+
+### Mistake 5: Wrong Part Number for Length
+```
+❌ BAD:
+PN: CABLE-TYPE-X  (generic cable)
+QTY: 47.5 M       (length in BOM only)
+
+✓ GOOD:
+PN: CABLE-TYPE-X-47.5M  (length in PN)
+OR
+PN: CABLE-ASSY-001  (unique assembly PN)
+with reference to drawing showing 47.5M
+```
+
+## Engineering Change Control for UOM
+If the length changes (like 52.5M → 49.8M scenario):
+```
+ENGINEERING CHANGE ORDER: ECO-2847
+─────────────────────────────────────────────────
+
+CHANGE TYPE: Design Modification
+REASON: Supplier packaging constraint - cost optimization
+AFFECTED ITEMS:
+  CABLE-47.5M → CABLE-49.8M (new PN created)
+  
+OLD SPECIFICATION:
+  Part Number: CABLE-47.5M
+  Length: 47.5 ± 0.1 M
+  Drawing: EE-12345-001 Rev A
+
+NEW SPECIFICATION:
+  Part Number: CABLE-49.8M
+  Length: 49.8 ± 0.1 M
+  Drawing: EE-12345-001 Rev B
+IMPACT ANALYSIS:
+  ✓ Electrical: No impact (within spec)
+  ✓ Mechanical: Fits alternate routing
+  ✓ Testing: No change required
+  ✓ Documentation: Update assembly manual
+  ⚠ Procurement: New supplier part mapping
+  ✓ Inventory: Use existing stock first, then new
+
+IMPLEMENTATION:
+  Effective Date: Upon approval
+  Disposition: Use existing stock (47.5M) until depleted
+  New Production: Use 49.8M design
+  
+APPROVALS:
+  Engineering: J.Smith ✓
+  Manufacturing: K.Williams ✓
+  Quality: T.Anderson ✓
+  Procurement: M.Chen ✓
+Summary: How Engineering Defines UOM
+Engineers define UOM through multiple interrelated documents that form a complete specification:
+1. Drawing: Visual representation with dimensioned length
+2. BOM: Structured data with part number, quantity, UOM
+3. Part Master: Detailed attributes and specifications
+4. Specification: Standards, tolerances, measurement methods
+5. Change Control: History of decisions and modifications
+The UOM is never ambiguous in engineering documentation - it's explicitly stated, standardized, and traceable. The challenge arises when this engineering definition must interface with procurement's commercial reality.
+Not a fan of part number encoding. What about a unique part number and define the remainder in attributes. Some ERP systems have limitations on part number and name character length. Provide suggestions
+Non-Encoded Part Number Approach with Attributes
+You're absolutely right - part number encoding creates serious problems. Modern best practice favors semantic-free part numbers with rich attribute data.
+Problems with Encoded Part Numbers
+System Limitations:
+• ERP character limits (often 18-25 characters max)
+• Special characters forbidden or cause import issues
+• Case sensitivity problems
+• Search/sort difficulties
+Business Problems:
+• Design changes require new part numbers (ECO nightmare)
+• Proliferation of near-identical parts
+• Difficult to standardize across product lines
+• Confusing for humans to parse
+• Database indexing inefficiencies
+Example of Encoded Chaos:
+CABLE-X-47.5M-18AWG-BLK-PVC-600V-CRIMP-A
+                ↑
+          Hits 40+ character limit in many systems
+```
+
+## Recommended Approach: Semantic-Free Part Numbers
+### Part Number Schema
+```
+┌─────────────────────────────────────────┐
+│  SEQUENTIAL INTELLIGENT NUMBERING       │
+├─────────────────────────────────────────┤
+│                                         │
+│  Format: XXX-NNNNNN-VV                  │
+│           │   │      │                  │
+│           │   │      └─ Variant (00-99) │
+│           │   └──────── Sequential      │
+│           └──────────── Category prefix │
+│                                         │
+│  Examples:                              │
+│    CAB-012847-00  (Cable assembly)      │
+│    ELC-003921-01  (Electronic component)│
+│    MEC-008456-00  (Mechanical part)     │
+│    ASM-001234-02  (Assembly)            │
+└─────────────────────────────────────────┘
+```
+
+**Benefits:**
+- Short (13 characters including dashes)
+- Unique and sequential
+- Never needs to change
+- No business logic embedded
+- Easy database indexing
+### Alternative: Pure Sequential
+```
+┌─────────────────────────────────────────┐
+│  PURE SEQUENTIAL (Simplest)             │
+├─────────────────────────────────────────┤
+│                                         │
+│  Format: PNNNNNN                        │
+│           │                             │
+│           └─ "P" prefix + 6 digits      │
+│                                         │
+│  Examples:                              │
+│    P012847                              │
+│    P003921                              │
+│    P008456                              │
+│    P001234                              │
+│                                         │
+│  Benefits:                              │
+│  • Shortest possible (7 chars)          │
+│  • Guaranteed unique                    │
+│  • No category assumptions              │
+│  • Works universally                    │
+└─────────────────────────────────────────┘
+```
+
+## Rich Attribute Model
+All meaning moves to **structured attributes**:
+### Engineering Item Master Record
+```
+PART NUMBER: CAB-012847-00
+REVISION: B
+─────────────────────────────────────────────────
+
+IDENTIFICATION ATTRIBUTES:
+├─ Part Name: Cable Assembly, Power Distribution
+├─ Short Description: 18AWG Cable, Type X, with terminals
+├─ Long Description: Power cable assembly consisting of...
+├─ Commodity Code: 26.52.17.00 (cables with connectors)
+└─ Part Category: Cable Assembly
+
+PHYSICAL ATTRIBUTES:
+├─ Base Material: Copper conductor, PVC insulation
+├─ Wire Gauge: 18 AWG
+├─ Conductor Type: Stranded copper
+├─ Insulation Material: PVC
+├─ Insulation Color: Black
+├─ Cable Type: Type X
+├─ Flexibility: Flexible
+└─ Weight per UOM: 0.035 kg/m
+
+DIMENSIONAL ATTRIBUTES:
+├─ Length (Nominal): 47.5 M           ← KEY ATTRIBUTE
+├─ Length (Tolerance): ± 0.1 M
+├─ Length (Minimum): 47.4 M
+├─ Length (Maximum): 47.6 M
+├─ Measurement Method: Centerline, installed
+├─ Outer Diameter: 3.5 mm
+└─ Bend Radius (Min): 50 mm
+
+UNIT OF MEASURE ATTRIBUTES:
+├─ Primary UOM: M (Meter)             ← ENGINEERING UOM
+├─ UOM Precision: 1 decimal place
+├─ Secondary UOM: FT (for reference only)
+├─ Conversion Factor: 1 M = 3.28084 FT
+├─ Weight UOM: KG
+└─ Each Equivalent: N/A (continuous dimension)
+
+ELECTRICAL ATTRIBUTES:
+├─ Voltage Rating: 600 V AC/DC
+├─ Current Rating: 10 A continuous
+├─ Temperature Rating: -20°C to +80°C
+├─ Dielectric Strength: 2000 V test
+└─ Resistance: 21.4 ohm/km @ 20°C
+
+FUNCTIONAL ATTRIBUTES:
+├─ Application: Power distribution
+├─ Environment: Indoor, dry location
+├─ Certification: UL 1007, IEC 60227
+├─ RoHS Compliant: Yes
+└─ REACH Compliant: Yes
+
+CONFIGURATION ATTRIBUTES:
+├─ End 1: Crimp terminal, TERM-A
+├─ End 2: Crimp terminal, TERM-A
+├─ Connector Type: Ring terminal
+├─ Strain Relief: Heat shrink tubing
+└─ Marking: Part number label at midpoint
+
+MANUFACTURING ATTRIBUTES:
+├─ Make/Buy: Make (assembled in-house)
+├─ Manufacturing Process: Cut, strip, crimp, test
+├─ Fabrication Time: 15 minutes
+├─ Skill Level Required: Certified technician
+├─ Test Requirements: Continuity, hi-pot
+├─ Scrap Allowance: 2%
+└─ Rework Allowed: No
+
+PROCUREMENT ATTRIBUTES:
+├─ Source Material: Cable bulk stock (CAB-RAW-001)
+├─ Raw Material UOM: M (meter)
+├─ Raw Material per Unit: 47.5 M
+├─ Purchase Lead Time: N/A (make item)
+├─ Supplier Part Number: N/A
+└─ Cost Type: Standard cost (material + labor)
+
+INVENTORY ATTRIBUTES:
+├─ Stock UOM: EA (each assembly)
+├─ Storage Location Type: Cable rack
+├─ Shelf Life: Unlimited
+├─ Storage Temperature: 15-25°C
+├─ Lot Control: Yes (batch tracking)
+└─ Serial Control: No
+
+QUALITY ATTRIBUTES:
+├─ Inspection Level: Standard
+├─ Critical Dimension: Length ± 0.1 M
+├─ Test Specification: TEST-CAB-001
+├─ Acceptance Criteria: 100% electrical test pass
+└─ Quality Records Required: Test report per batch
+
+DOCUMENT REFERENCES:
+├─ Engineering Drawing: EE-12345-001 Rev B
+├─ Specification: EE-SPEC-CABLE-001 Rev C
+├─ Test Procedure: TEST-CAB-001 Rev A
+├─ Work Instruction: WI-CABLE-ASSY-001 Rev D
+├─ Safety Data Sheet: N/A (assembled product)
+└─ Installation Guide: INST-ASSY-001 Rev A
+
+LIFECYCLE INFORMATION:
+├─ Status: Released for Production
+├─ Created Date: 2024-03-15
+├─ Created By: J.Smith (Engineering)
+├─ Last Modified: 2024-08-22
+├─ Modified By: R.Johnson (ECO-2847)
+├─ Supersedes: CAB-012846-00 (52.5M version)
+└─ Superseded By: None (current)
+```
+
+## Attribute Structure by System Type
+### Standard ERP Systems (SAP, Oracle, Dynamics)
+```
+ITEM MASTER STRUCTURE
+─────────────────────────────────────────────────
+
+BASIC DATA TAB:
+  Part Number: CAB-012847-00
+  Description: Cable Assembly, Power, 18AWG
+  Status: Active
+  Part Type: Make
+  ABC Class: B
+  
+UNITS TAB:
+  Base UOM: M
+  Weight UOM: KG
+  Volume UOM: M3
+  Alt UOM 1: EA (for inventory tracking)
+  Alt UOM 2: FT (reference)
+  
+ENGINEERING TAB:
+  Revision: B
+  Drawing Number: EE-12345-001
+  Specification: EE-SPEC-CABLE-001
+  Engineer: J.Smith
+  ECO Number: ECO-2847
+  
+PLANNING TAB:
+  Lead Time: 5 days
+  Safety Stock: 10 EA
+  Reorder Point: 5 EA
+  Order Quantity: 20 EA
+  Planner Code: P-CABLES
+  
+COSTING TAB:
+  Cost Method: Standard
+  Material Cost: $12.50
+  Labor Cost: $3.75
+  Overhead: $1.25
+  Total Std Cost: $17.50
+  
+QUALITY TAB:
+  Inspection Required: Yes
+  Test Specification: TEST-CAB-001
+  Certificate Required: No
+  Shelf Life: N/A
+CUSTOM FIELDS (User-Defined):
+  UDF_Length_Nominal: 47.5
+  UDF_Length_UOM: M
+  UDF_Length_Tolerance: 0.1
+  UDF_Wire_Gauge: 18
+  UDF_Cable_Type: X
+  UDF_Voltage_Rating: 600
+  UDF_Current_Rating: 10
+  UDF_Color: Black
+  UDF_Material: Copper/PVC
+```
+### PLM Systems (Windchill, Teamcenter, Enovia)
+```
+ITEM OBJECT: CAB-012847-00
+─────────────────────────────────────────────────
+
+CLASSIFICATION:
+  Class: Electrical > Cables > Cable Assemblies
+  Subclass: Power Cables
+  
+ATTRIBUTES (from class template):
+  
+  Dimensional:
+    Length_Nominal [M]: 47.5
+    Length_Tolerance [M]: ± 0.1
+    Length_Min [M]: 47.4
+    Length_Max [M]: 47.6
+    Diameter_Outer [MM]: 3.5
+    
+  Electrical:
+    Voltage_Rating [V]: 600
+    Current_Rating [A]: 10
+    Conductor_Gauge [AWG]: 18
+    Conductor_Material: Copper
+    
+  Material:
+    Insulation_Material: PVC
+    Insulation_Color: Black
+    RoHS_Compliant: True
+    
+  Manufacturing:
+    Make_Buy: Make
+    Process: Cut_Strip_Crimp_Test
+    
+RELATIONSHIPS:
+  Uses → CAB-RAW-001 (raw cable stock)
+  Uses → TERM-A (terminals)
+  Referenced By → EE-12345-001 (drawing)
+  Specified By → EE-SPEC-CABLE-001
+  
+LIFECYCLE:
+  State: Released
+  Change Notice: ECO-2847
+```
+
+### Lightweight/Simple ERP (QuickBooks, Xero, etc.)
+When system has **limited custom fields**, use structured description:
+```
+ITEM: CAB-012847-00
+─────────────────────────────────────────────────
+
+NAME: Cable Assy Power 47.5M
+DESCRIPTION:
+Cable Assembly, Power Distribution
+- Length: 47.5M ± 0.1M
+- Gauge: 18 AWG
+- Type: Type X, Stranded copper
+- Insulation: Black PVC
+- Voltage: 600V
+- Current: 10A
+- Terminals: TERM-A crimped both ends
+- Drawing: EE-12345-001 Rev B
+- Spec: EE-SPEC-CABLE-001 Rev C
+UOM: EA (each assembly)
+Stock UOM: EA
+Purchase UOM: N/A (make item)
+VENDOR: Internal (fabricated)
+COST: $17.50
+CUSTOM FIELD 1 (Length): 47.5
+CUSTOM FIELD 2 (Length_UOM): M
+CUSTOM FIELD 3 (Drawing): EE-12345-001
+```
+## Searchability Strategy
+With semantic-free part numbers, you need **strong search capabilities**:
+### Multi-Field Search
+```
+SEARCH EXAMPLE: "Cable 47.5 meter"
+Search fields:
+├─ Part Number: CAB-012847-00 ❌ (no match)
+├─ Description: "Cable Assembly..." ✓ (matches "cable")
+├─ Attribute Length: 47.5 ✓ (exact match)
+├─ Attribute Length_UOM: M ✓ (matches "meter")
+└─ Drawing Number: EE-12345-001 ❌ (no match)
+
+RESULT: CAB-012847-00 (high relevance)
+```
+### Parametric Search Interface
+```
+┌─────────────────────────────────────────────┐
+│  FIND PARTS                                 │
+├─────────────────────────────────────────────┤
+│                                             │
+│  Category: [Cable Assembly ▼]              │
+│                                             │
+│  Length:   [47.5] [M ▼] ± [0.1]            │
+│                                             │
+│  Gauge:    [18 AWG ▼]                       │
+│                                             │
+│  Type:     [Type X ▼]                       │
+│                                             │
+│  Voltage:  [600V ▼]                         │
+│                                             │
+│  Status:   [✓] Active  [ ] Obsolete        │
+│                                             │
+│            [Search]  [Clear]                │
+│                                             │
+├─────────────────────────────────────────────┤
+│  RESULTS: 1 item found                      │
+│                                             │
+│  ☑ CAB-012847-00                            │
+│     Cable Assembly, Power, 47.5M            │
+│     18AWG, Type X, 600V                     │
+│     Status: Released                        │
+└─────────────────────────────────────────────┘
+```
+
+### Intelligent Part Name Construction
+Since part number is meaningless, **description becomes critical**:
+```
+PART NAME FORMULA (Auto-generated from attributes):
+[Category] [Type] [Key_Param1] [Key_Param2] [Key_Param3]
+Example:
+Category: Cable Assembly
+Type: Power
+Length: 47.5M
+Gauge: 18AWG
+Voltage: 600V
+GENERATED NAME:
+"Cable Assy Power 47.5M 18AWG 600V"
+Alternative format:
+"Cable Assy, 47.5M, 18AWG, Type X, 600V"
+Benefits:
+- Human readable
+- Contains searchable keywords
+- Auto-updates if attributes change
+- Consistent across all parts
+```
+## Managing Design Changes with Attributes
+### Scenario: Length changes 47.5M → 49.8M
+
+**Option 1: Create New Part Number (Recommended)**
+```
+OLD PART:
+  PN: CAB-012847-00
+  Status: Obsolete (superseded)
+  Length: 47.5 M
+  Superseded By: CAB-015921-00
+  
+NEW PART:
+  PN: CAB-015921-00
+  Status: Active
+  Length: 49.8 M
+  Supersedes: CAB-012847-00
+  
+REASON: Different functional length = different part
+```
+**Option 2: Revision Change (If length within tolerance)**
+```
+PART: CAB-012847-00
+Rev A → Rev B
+
+CHANGE:
+  Attribute: Length_Tolerance
+  Old: ± 0.1 M
+  New: ± 0.5 M
+  
+REASON: Tolerance relaxation, same nominal length
+```
+## Attribute Naming Conventions
+**Standardized attribute names** are critical:
+```
+NAMING STANDARD
+─────────────────────────────────────────────────
+
+Format: [Domain]_[Parameter]_[Qualifier]
+Examples:
+  DIM_Length_Nominal
+  DIM_Length_Tolerance
+  DIM_Length_Min
+  DIM_Length_Max
+  DIM_Diameter_Outer
+  DIM_Width
+  
+  ELEC_Voltage_Rating
+  ELEC_Current_Rating
+  ELEC_Resistance
+  
+  MAT_Conductor_Type
+  MAT_Insulation_Material
+  
+  MFG_Make_Buy
+  MFG_Lead_Time
+  
+  UOM_Base
+  UOM_Secondary
+  UOM_Precision
+Benefits:
+- Alphabetically groups related attributes
+- Clear domain ownership
+- Supports reporting/analytics
+- Consistent across system
+```
+## Workarounds for System Limitations
+### If Custom Fields are Limited (< 10 fields)
+**Priority Attributes:**
+```
+1. UDF_Length [decimal]        ← Most critical
+2. UDF_Length_UOM [text]       ← Unit
+3. UDF_Wire_Gauge [text]       ← Key spec
+4. UDF_Cable_Type [text]       ← Identifier
+5. UDF_Drawing_Num [text]      ← Reference
+6. UDF_Status [list]           ← Lifecycle
+7. UDF_Make_Buy [list]         ← Planning
+8. UDF_Voltage [integer]       ← Safety critical
+```
+
+**Use structured description field for remaining data**
+### If No Custom Fields Available
+**Embed in description with parsing tags:**
+```
+DESCRIPTION:
+Cable Assy, Power Distribution
+[LEN:47.5M±0.1][GAUGE:18AWG][TYPE:X][VOLT:600V]
+[DWG:EE-12345-001][SPEC:EE-SPEC-CABLE-001]
+Stranded copper conductor, black PVC insulation
+Crimp terminals both ends (TERM-A)
+```
+Can be parsed programmatically: `[TAG:VALUE]`
+## Integration with Procurement
+**Engineering attributes** must map to **procurement needs**:
+```
+ITEM: CAB-012847-00 (Engineering Part)
+─────────────────────────────────────────────────
+
+ENGINEERING VIEW:
+  Length Required: 47.5 M
+  Base UOM: M
+  Type: Make (fabricated)
+  
+PROCUREMENT VIEW (linked):
+  Source Material: CAB-RAW-001 (bulk cable)
+  Purchase UOM: EA (spool)
+  Purchase Qty: 1 spool
+  Spool Length: 50 M
+  Utilization: 95%
+  Waste: 2.5 M per assembly
+  
+LINKED ITEM: CAB-RAW-001
+  Description: Cable Type X, bulk stock
+  Purchase UOM: EA (spool)
+  Purchase Size: 50 M per spool
+  Supplier PN: ACME-CABLE-X-50M
+  Unit Price: $250/spool
+  Effective Cost: $5/M
+This creates the translation layer between engineering specs and procurement reality, while keeping part numbers clean and attributes structured.
+Summary: Best Practices
+✅ DO:
+• Use short, semantic-free part numbers
+• Put ALL meaning in structured attributes
+• Standardize attribute naming
+• Auto-generate readable descriptions
+• Enable parametric search
+• Link engineering to procurement items
+• Version control through ECO/revision
+❌ DON'T:
+• Encode dimensions in part number
+• Exceed system character limits
+• Use special characters that cause issues
+• Rely on humans to parse encoded meanings
+• Change part numbers for attribute changes (unless functionally different)
+• Mix units in descriptions without clear labels
+The key: Part numbers are database keys, attributes are data.
+So how do we tag something like a cable that has a specific length for procurement to review it it's lens when the purchase length potentially is different. My not all buy items would have the issue. Like fasten have length but are purchased as an "each" item.
+Tagging Items with Engineering vs. Procurement UOM Conflicts
+This is a critical distinction - you need to flag items where the engineering UOM and procurement UOM are dimensionally incompatible, not just different.
+The Key Distinction
+No Conflict (Simple Conversion)
+FASTENER EXAMPLE:
+Engineering needs: 10 EA (10 bolts)
+Procurement buys: 1 BX (box of 100 bolts)
+Conversion: 1 BX = 100 EA
+✓ Same dimension (count)
+✓ Simple multiplication
+✓ No waste issue
+✓ No procurement review needed
+```
+
+### Has Conflict (Dimensional Mismatch)
+```
+CABLE EXAMPLE:
+Engineering needs: 47.5 M (continuous length)
+Procurement buys: 1 EA (spool containing 50M)
+Conversion: 1 EA = 50 M, but...
+⚠️ Different dimensions (count vs. length)
+⚠️ Packaging constraint
+⚠️ Potential waste
+⚠️ REQUIRES procurement review
+```
+
+## Attribute Tags for Conflict Detection
+### Primary Attribute: UOM_Conflict_Type
+```
+ITEM ATTRIBUTE: UOM_Conflict_Type
+─────────────────────────────────────────────────
+
+VALUES:
+├─ "NONE" (default)
+│   Engineering and procurement use compatible UOMs
+│   Examples: Fasteners (EA to BX), resistors (EA to RL)
+│
+├─ "PACKAGING"
+│   Different UOMs but straightforward conversion
+│   Examples: Screws (EA to 100-packs), wire (M to spools)
+│   Action: Auto-conversion, round up to package size
+│
+├─ "DIMENSIONAL"  ← KEY FLAG FOR YOUR USE CASE
+│   Engineering specifies continuous dimension,
+│   Procurement must buy discrete packages
+│   Examples: Cable (length), sheet metal (area), pipe (length)
+│   Action: REQUIRES procurement review and planning
+│
+├─ "CUT_TO_LENGTH"
+│   Supplier offers cutting service at premium
+│   Examples: Cable, tubing, extrusions
+│   Action: Evaluate cut-to-length vs. standard packaging
+│
+└─ "BULK_MANAGED"
+    Buy in bulk, cut/dispense internally
+    Examples: Solder wire, adhesive tape, chain
+    Action: Inventory management handles dispensing
+```
+
+### Supporting Attributes
+```
+DIMENSIONAL CONFLICT ATTRIBUTES
+─────────────────────────────────────────────────
+
+UOM_Conflict_Type: DIMENSIONAL
+Engineering_UOM: M (meter - continuous)
+Engineering_Quantity: 47.5
+Engineering_Tolerance: ± 0.1
+Engineering_Dimension_Type: Length
+Procurement_UOM: EA (each - discrete)
+Procurement_Package_Size: 50 M per spool
+Procurement_Package_Type: Spool
+Procurement_Minimum_Order: 1 EA
+Procurement_Order_Multiple: 1 EA
+Utilization_Rate: 95%  (47.5/50)
+Waste_per_Unit: 2.5 M (5%)
+Waste_Cost_Impact: $12.50
+Requires_Review: TRUE
+Review_Reason: "Engineering length exceeds standard package"
+Procurement_Action_Required: "Evaluate suppliers, cut-to-length, or redesign"
+```
+## Detection Logic / Business Rules
+### Rule 1: Dimensional Type Mismatch
+```
+IF Engineering_Dimension_Type = "CONTINUOUS"
+   (Length, Area, Volume, Mass, Time)
+AND Procurement_UOM = "EA" or "PC" or "BX" or "SET"
+   (Discrete count units)
+THEN
+   UOM_Conflict_Type = "DIMENSIONAL"
+   Requires_Review = TRUE
+```
+### Rule 2: Requirement Exceeds Package Size
+```
+IF Engineering_Quantity > Procurement_Package_Size
+THEN
+   UOM_Conflict_Type = "DIMENSIONAL"
+   Multi_Package_Required = TRUE
+   Requires_Review = TRUE
+   Alert_Engineering = TRUE
+   Alert_Message = "Length requirement exceeds standard package size"
+```
+### Rule 3: High Waste Threshold
+```
+IF Waste_per_Unit > [Threshold, e.g., 10% or $50]
+THEN
+   Requires_Review = TRUE
+   Alert_Finance = TRUE
+   Review_Reason = "Material waste exceeds acceptable threshold"
+```
+## Item Master Configuration Examples
+### Example 1: Cable with Conflict (Your Scenario)
+```
+PART: CAB-012847-00
+Description: Cable Assembly, Power, 47.5M
+─────────────────────────────────────────────────
+
+ENGINEERING SPECIFICATION:
+  Make_Buy_Code: MAKE (fabricated)
+  Engineering_UOM: M
+  Quantity_Required: 47.5
+  Dimension_Type: LENGTH_CONTINUOUS
+  
+PROCUREMENT PLANNING:
+  Source_Material: CAB-RAW-001 (bulk cable stock)
+  UOM_Conflict_Type: DIMENSIONAL 🚨
+  
+  Engineering_UOM: M (continuous)
+  Procurement_UOM: EA (discrete spools)
+  Package_Contains: 50 M
+  
+  Requires_Review: TRUE
+  Review_Status: APPROVED
+  Review_Date: 2024-08-22
+  Review_By: M.Chen (Procurement)
+  Review_Notes: "Approved to purchase 50M spools. 
+                 2.5M waste per assembly acceptable.
+                 Evaluated cut-to-length - not cost effective 
+                 at current volumes."
+  
+  Alternative_Evaluated: Cut-to-length service
+  Alternative_Cost: $8.50/M vs. $5/M standard
+  Alternative_Decision: REJECTED (68% cost increase)
+  
+  Utilization: 95%
+  Waste_Length: 2.5 M
+  Waste_Cost: $12.50
+  Annual_Waste_Cost: $6,250 (500 units/year)
+```
+
+### Example 2: Fastener - No Conflict
+```
+PART: BOLT-012345-00
+Description: Bolt, Hex Head, M6x20, Grade 8.8
+─────────────────────────────────────────────────
+
+ENGINEERING SPECIFICATION:
+  Make_Buy_Code: BUY
+  Engineering_UOM: EA
+  Quantity_Required: 8
+  Dimension_Type: COUNT_DISCRETE
+  
+PROCUREMENT PLANNING:
+  UOM_Conflict_Type: NONE ✓
+  
+  Engineering_UOM: EA (discrete)
+  Procurement_UOM: BX (box)
+  Package_Contains: 100 EA
+  
+  Requires_Review: FALSE
+  Conversion_Rule: ROUND_UP
+  Order_Calculation: CEILING(Qty_Needed / Package_Size)
+  
+  For 8 EA needed:
+  Order: 1 BX (100 EA)
+  Available for 12.5 assemblies
+  Standard practice - no review needed
+```
+
+### Example 3: Sheet Metal - Dimensional Conflict
+```
+PART: PANEL-FRT-001
+Description: Front Panel, Aluminum, 500x300mm
+─────────────────────────────────────────────────
+
+ENGINEERING SPECIFICATION:
+  Make_Buy_Code: MAKE (cut from sheet)
+  Engineering_UOM: M2 (square meter)
+  Quantity_Required: 0.15 M2 (500mm x 300mm)
+  Dimension_Type: AREA_CONTINUOUS
+  
+PROCUREMENT PLANNING:
+  Source_Material: AL-SHEET-3MM (aluminum sheet stock)
+  UOM_Conflict_Type: DIMENSIONAL 🚨
+  
+  Engineering_UOM: M2 (continuous area)
+  Procurement_UOM: EA (discrete sheets)
+  Package_Size: 1.22 M x 2.44 M = 2.977 M2 per sheet
+  
+  Requires_Review: TRUE
+  Review_Status: APPROVED
+  
+  Nesting_Analysis: TRUE
+  Parts_per_Sheet: 19 pieces (with optimization)
+  Utilization: 95.5%
+  Scrap_per_Sheet: 0.13 M2
+  
+  Review_Notes: "Nesting study shows 19 parts per sheet.
+                 Sheet purchase approved. Manufacturing 
+                 to optimize cutting pattern per WI-NEST-001."
+```
+
+### Example 4: Wire - Bulk Managed
+```
+PART: WIRE-22AWG-BLK
+Description: Wire, 22AWG, Black, Stranded
+─────────────────────────────────────────────────
+
+ENGINEERING SPECIFICATION:
+  Make_Buy_Code: BUY
+  Engineering_UOM: M
+  Quantity_Required: 0.35 M (per assembly)
+  Dimension_Type: LENGTH_CONTINUOUS
+  
+PROCUREMENT PLANNING:
+  UOM_Conflict_Type: BULK_MANAGED 📦
+  
+  Engineering_UOM: M (continuous)
+  Procurement_UOM: EA (spool)
+  Package_Size: 500 M per spool
+  
+  Requires_Review: FALSE (standard bulk material)
+  
+  Inventory_Strategy: BULK_STOCK
+  Reorder_Point: 2000 M
+  Order_Quantity: 2 EA (1000 M)
+  Dispensing_Method: Cut-to-length at issue
+  
+  Annual_Usage: 8,750 M (25,000 assemblies)
+  Stock_Turns: 4.4 per year
+  
+  Review_Notes: "Standard bulk material. Warehouse 
+                 cuts to length per kit. No procurement 
+                 review required for individual assemblies."
+```
+
+## Workflow Triggers
+### When Item is Created/Modified
+```
+TRIGGER: Item save with Make_Buy = "MAKE"
+─────────────────────────────────────────────────
+
+CHECK:
+1. Does item have source material defined?
+2. Compare Engineering_UOM to Source_Procurement_UOM
+3. Compare Engineering_Qty to Source_Package_Size
+IF conflict detected:
+  └─ Set UOM_Conflict_Type
+  └─ Set Requires_Review = TRUE
+  └─ Create task for Procurement review
+  └─ Send notification to Procurement team
+  └─ Block item from "Released" status until reviewed
+
+IF no conflict:
+  └─ Set UOM_Conflict_Type = "NONE"
+  └─ Set Requires_Review = FALSE
+  └─ Allow normal workflow
+```
+
+### Procurement Review Workflow
+```
+NOTIFICATION TO PROCUREMENT:
+─────────────────────────────────────────────────
+
+Subject: New item requires UOM conflict review
+Item: CAB-012847-00
+Description: Cable Assembly, Power, 47.5M
+Conflict Type: DIMENSIONAL
+Engineering needs: 47.5 M
+Source material: CAB-RAW-001 (50M spools)
+Estimated waste: 2.5 M (5%, $12.50 per unit)
+Annual impact: $6,250 (est. 500 units/year)
+ACTION REQUIRED:
+[ ] Approve standard packaging (accept waste)
+[ ] Request cut-to-length quotes
+[ ] Recommend design change to Engineering
+[ ] Identify alternative suppliers
+[ ] Establish bulk purchasing + cutting
+APPROVAL FORM:
+Decision: _______________
+Justification: _______________
+Alternatives Evaluated: _______________
+Approved By: _______________
+Date: _______________
+[Approve] [Request Engineering Review] [Need More Info]
+```
+## Shared Lens Application View
+### Lens Indicator on Item
+```
+┌─────────────────────────────────────────────┐
+│ CAB-012847-00: Cable Assy Power 47.5M      │
+├─────────────────────────────────────────────┤
+│                                             │
+│ Status: Released                            │
+│ Type: Make (Assembly)                       │
+│                                             │
+│ 🚨 UOM CONFLICT: Dimensional               │
+│    Requires cross-functional coordination   │
+│                                             │
+│ [View Engineering Lens]                     │
+│ [View Procurement Lens]                     │
+│ [View Conflict Analysis]                    │
+└─────────────────────────────────────────────┘
+```
+
+### Conflict Analysis View
+```
+┌─────────────────────────────────────────────────┐
+│ UOM CONFLICT ANALYSIS                           │
+├─────────────────────────────────────────────────┤
+│                                                 │
+│ Item: CAB-012847-00                             │
+│ Conflict Type: DIMENSIONAL 🚨                   │
+│                                                 │
+│ ┌──────────────────┬──────────────────────┐    │
+│ │ ENGINEERING VIEW │ PROCUREMENT VIEW     │    │
+│ ├──────────────────┼──────────────────────┤    │
+│ │ Need: 47.5 M     │ Buy: 1 EA (spool)    │    │
+│ │ UOM: M           │ Contains: 50 M       │    │
+│ │ Type: Continuous │ Type: Discrete       │    │
+│ │ Precision: 0.1M  │ Cannot split         │    │
+│ └──────────────────┴──────────────────────┘    │
+│                                                 │
+│ ⚠️ IMPACT:                                      │
+│   • Must buy 50M to get 47.5M needed            │
+│   • Waste: 2.5M per assembly (5%)               │
+│   • Cost impact: $12.50 per unit                │
+│   • Annual waste: $6,250 (500 units/yr)         │
+│                                                 │
+│ ✓ RESOLUTION (Approved 2024-08-22):            │
+│   Accept standard packaging                     │
+│   Rationale: Cut-to-length 68% more expensive   │
+│   Approved by: M.Chen (Procurement)             │
+│                                                 │
+│ 📋 ALTERNATIVES EVALUATED:                      │
+│   ✗ Cut-to-length: $8.50/M vs $5/M             │
+│   ✗ Design change: Schedule impact too high    │
+│   ✗ Alt supplier: None found with better pkg   │
+│                                                 │
+│ [View Full History] [Reopen Review]            │
+└─────────────────────────────────────────────────┘
+```
+
+## Search/Filter for Conflict Items
+```
+┌─────────────────────────────────────────────┐
+│ FIND ITEMS WITH UOM CONFLICTS               │
+├─────────────────────────────────────────────┤
+│                                             │
+│ Conflict Type:                              │
+│   [ ] None (all items)                      │
+│   [✓] Dimensional conflicts only            │
+│   [ ] Any conflict type                     │
+│                                             │
+│ Review Status:                              │
+│   [✓] Pending review                        │
+│   [ ] Approved                              │
+│   [ ] Requires re-evaluation                │
+│                                             │
+│ Waste Threshold:                            │
+│   [ ] Any amount                            │
+│   [✓] > $10 per unit                        │
+│   [ ] > $50 per unit                        │
+│                                             │
+│ [Search]                                    │
+│                                             │
+├─────────────────────────────────────────────┤
+│ RESULTS: 3 items                            │
+│                                             │
+│ 🚨 CAB-012847-00 - Cable 47.5M             │
+│    Waste: $12.50/unit | Status: Approved    │
+│                                             │
+│ 🚨 TUBE-SS-2.3M - Stainless tube           │
+│    Waste: $45/unit | Status: PENDING ⚠️     │
+│                                             │
+│ 🚨 SHEET-AL-0.6M2 - Aluminum sheet         │
+│    Waste: $8/unit | Status: Approved        │
+└─────────────────────────────────────────────┘
+Summary: The Tag Strategy
+Core Concept: Not all UOM differences need review - only dimensional mismatches where:
+1. Engineering specifies continuous dimension (length, area, volume)
+2. Procurement must buy discrete packages
+3. Package size creates waste or multi-package needs
+4. The mismatch has significant cost/operational impact
+Key Attributes to Implement:
+• UOM_Conflict_Type (enum: NONE, PACKAGING, DIMENSIONAL, CUT_TO_LENGTH, BULK_MANAGED)
+• Requires_Review (boolean)
+• Review_Status (enum: PENDING, APPROVED, REJECTED, RE_EVALUATE)
+• Waste_per_Unit (decimal)
+• Waste_Cost_Impact (currency)
+Workflow:
+1. System auto-detects conflicts on item creation
+2. Flags items requiring procurement review
+3. Blocks release until reviewed
+4. Documents decision and alternatives
+5. Tracks ongoing impact
+This makes the invisible visible - surfacing the procurement challenges that engineering specs create, enabling proactive collaboration rather than reactive firefighting.
+Convert to design requirements for shared lens application
+Shared Lens Application - Design Requirements
+UOM Conflict Management Feature
+
+1. FEATURE OVERVIEW
+1.1 Purpose
+Enable cross-functional visibility and management of Unit of Measure conflicts between engineering specifications and procurement constraints, particularly where dimensional mismatches create operational and cost impacts.
+1.2 User Personas
+• Engineering: Defines technical requirements without full visibility to procurement constraints
+• Procurement: Sources materials within supplier packaging constraints
+• Manufacturing: Manages material utilization and waste
+• Finance: Analyzes cost impacts of material waste
+• Product Management: Makes trade-off decisions on design vs. cost
+1.3 Core Value Proposition
+Transform UOM conflicts from hidden friction into visible, manageable trade-offs through multi-perspective item representation and collaborative decision workflows.
+
+2. DATA MODEL REQUIREMENTS
+2.1 Item Entity Extensions
+2.1.1 Core Item Attributes
+Item {
+  item_id: string (PK)
+  part_number: string (unique, semantic-free)
+  part_name: string (human-readable, searchable)
+  description: text
+  status: enum [Draft, Review, Released, Obsolete]
+  revision: string
+  created_date: datetime
+  created_by: user_id
+  modified_date: datetime
+  modified_by: user_id
+}
+```
+#### 2.1.2 Engineering Perspective Attributes
+```
+EngineeringSpec {
+  item_id: string (FK)
+  make_buy_code: enum [Make, Buy, Make_or_Buy]
+  
+  // Engineering UOM
+  engineering_uom: string (M, M2, M3, KG, L, EA, etc.)
+  engineering_quantity: decimal(12,4)
+  engineering_tolerance: decimal(12,4)
+  engineering_tolerance_type: enum [Plus_Minus, Min_Max, Percentage]
+  
+  // Dimensional classification
+  dimension_type: enum [
+    COUNT_DISCRETE,      // EA, PC - no conflict potential
+    LENGTH_CONTINUOUS,   // M, FT - conflict potential
+    AREA_CONTINUOUS,     // M2, FT2 - conflict potential
+    VOLUME_CONTINUOUS,   // M3, L, GAL - conflict potential
+    MASS_CONTINUOUS,     // KG, LB - conflict potential
+    TIME_CONTINUOUS      // HR, MIN - for services
+  ]
+  
+  // References
+  drawing_number: string
+  specification_number: string
+  measurement_method: text
+  critical_dimension: boolean
+  
+  // Attributes (flexible key-value store)
+  attributes: jsonb {
+    "length_nominal": 47.5,
+    "length_min": 47.4,
+    "length_max": 47.6,
+    "wire_gauge": "18 AWG",
+    "cable_type": "X",
+    "voltage_rating": 600,
+    "current_rating": 10,
+    ...
+  }
+}
+```
+#### 2.1.3 Procurement Perspective Attributes
+```
+ProcurementSpec {
+  item_id: string (FK)
+  source_item_id: string (FK, nullable) // For make items
+  supplier_id: string (FK, nullable)
+  supplier_part_number: string
+  
+  // Procurement UOM
+  procurement_uom: string
+  procurement_package_type: string (Spool, Roll, Sheet, Box, Bag, Drum)
+  procurement_package_size: decimal(12,4)
+  procurement_package_uom: string
+  procurement_minimum_order: integer
+  procurement_order_multiple: integer
+  
+  // Pricing
+  unit_price: decimal(12,2)
+  price_uom: string
+  currency: string
+  price_effective_date: date
+  
+  // Lead time
+  lead_time_days: integer
+  
+  // Alternative sourcing
+  cut_to_length_available: boolean
+  cut_to_length_price: decimal(12,2)
+  cut_to_length_lead_time: integer
+  
+  // Attributes
+  attributes: jsonb {
+    "spool_length": 50,
+    "spool_weight": 2.5,
+    "packaging": "Cardboard reel",
+    "moq_value": 250,
+    ...
+  }
+}
+```
+#### 2.1.4 UOM Conflict Detection Attributes
+```
+UOMConflict {
+  item_id: string (FK)
+  
+  // Conflict classification
+  conflict_type: enum [
+    NONE,              // No conflict (EA to BX, same dimension)
+    PACKAGING,         // Simple conversion (EA to 100-packs)
+    DIMENSIONAL,       // Dimension mismatch (M to EA spool) 🚨
+    CUT_TO_LENGTH,     // Supplier offers cutting service
+    BULK_MANAGED,      // Internal inventory dispenses
+    EXCEEDS_PACKAGE    // Quantity > package size 🚨🚨
+  ]
+  
+  conflict_severity: enum [None, Low, Medium, High, Critical]
+  
+  // Impact analysis
+  requires_review: boolean
+  requires_engineering_review: boolean
+  requires_procurement_review: boolean
+  requires_finance_review: boolean
+  
+  // Utilization metrics
+  utilization_rate: decimal(5,2) // percentage
+  waste_quantity: decimal(12,4)
+  waste_uom: string
+  waste_cost_per_unit: decimal(12,2)
+  
+  // Multi-package scenarios
+  packages_required: integer
+  total_package_quantity: decimal(12,4)
+  excess_quantity: decimal(12,4)
+  
+  // Cost impact
+  standard_cost: decimal(12,2)
+  actual_cost: decimal(12,2)
+  cost_variance: decimal(12,2)
+  
+  // Annual projections (if volume known)
+  annual_volume: integer
+  annual_waste_cost: decimal(12,2)
+  
+  // Auto-calculated timestamps
+  conflict_detected_date: datetime
+  conflict_last_calculated: datetime
+}
+```
+
+#### 2.1.5 Review Workflow Attributes
+```
+ConflictReview {
+  review_id: string (PK)
+  item_id: string (FK)
+  
+  // Review status
+  review_status: enum [
+    PENDING,           // Awaiting review
+    IN_PROGRESS,       // Under evaluation
+    APPROVED,          // Conflict accepted
+    APPROVED_WITH_CONDITIONS,
+    REJECTED,          // Cannot proceed
+    ENGINEERING_CHANGE_REQUIRED,
+    RE_EVALUATE        // Circumstances changed
+  ]
+  
+  // Assignment
+  assigned_to: user_id
+  assigned_date: datetime
+  due_date: date
+  
+  // Decision tracking
+  decision: enum [
+    Accept_Standard_Packaging,
+    Use_Cut_To_Length,
+    Request_Design_Change,
+    Identify_Alt_Supplier,
+    Establish_Bulk_Purchasing,
+    Accept_Multi_Package_Waste,
+    Other
+  ]
+  
+  decision_date: datetime
+  decided_by: user_id
+  decision_rationale: text
+  
+  // Alternatives evaluation
+  alternatives_evaluated: jsonb [
+    {
+      "option": "Cut-to-length service",
+      "cost": 8.50,
+      "lead_time": 42,
+      "decision": "Rejected",
+      "reason": "68% cost increase not justified"
+    },
+    {
+      "option": "Design change to 50M",
+      "cost": 5000,
+      "lead_time": 14,
+      "decision": "Rejected", 
+      "reason": "Schedule impact too high"
+    }
+  ]
+  
+  // Approval chain
+  reviewed_by: user_id[]
+  approval_history: jsonb
+  
+  // Notes and attachments
+  review_notes: text
+  attachments: string[] // file references
+  
+  // Re-evaluation triggers
+  re_evaluation_trigger: enum [
+    Volume_Change,
+    Price_Change,
+    Supplier_Change,
+    Design_Change,
+    Cost_Threshold_Exceeded,
+    Periodic_Review
+  ]
+  next_review_date: date
+}
+```
+#### 2.1.6 Conversation Thread
+```
+ConflictDiscussion {
+  discussion_id: string (PK)
+  item_id: string (FK)
+  review_id: string (FK, nullable)
+  
+  // Thread structure
+  parent_discussion_id: string (FK, nullable) // For replies
+  thread_order: integer
+  
+  // Content
+  posted_by: user_id
+  posted_date: datetime
+  user_role: string // Engineering, Procurement, etc.
+  message: text
+  mentions: user_id[] // @mentions
+  
+  // Attachments
+  attachments: string[]
+  
+  // Status updates
+  status_change: boolean
+  old_status: string
+  new_status: string
+  
+  // Visibility
+  visibility: enum [Public, Department_Only, Reviewers_Only]
+}
+```
+---
+## 3. FUNCTIONAL REQUIREMENTS
+### 3.1 Conflict Detection Engine
+#### FR-3.1.1: Automatic Conflict Detection
+**Trigger**: Item save/update with Make_Buy = "MAKE" or "BUY"
+**Logic**:
+```
+IF dimension_type IN [LENGTH_CONTINUOUS, AREA_CONTINUOUS, 
+                      VOLUME_CONTINUOUS, MASS_CONTINUOUS]
+AND procurement_uom IN [EA, PC, BX, SET] (discrete)
+THEN
+  conflict_type = DIMENSIONAL
+  requires_review = TRUE
+  conflict_severity = calculate_severity()
+  
+IF engineering_quantity > procurement_package_size
+THEN
+  conflict_type = EXCEEDS_PACKAGE
+  conflict_severity = HIGH or CRITICAL
+  packages_required = CEILING(eng_qty / pkg_size)
+  requires_engineering_review = TRUE
+```
+#### FR-3.1.2: Severity Calculation
+```
+Calculate conflict_severity:
+IF conflict_type = NONE
+  RETURN None
+IF conflict_type = EXCEEDS_PACKAGE
+  RETURN Critical
+IF waste_cost_per_unit > $100 OR utilization_rate < 50%
+  RETURN High
+ELSE IF waste_cost_per_unit > $50 OR utilization_rate < 70%
+  RETURN Medium
+ELSE IF waste_cost_per_unit > $10 OR utilization_rate < 90%
+  RETURN Low
+ELSE
+  RETURN None
+```
+#### FR-3.1.3: Impact Calculations
+```
+Calculate waste_quantity:
+  waste_quantity = procurement_package_size - engineering_quantity
+  
+Calculate utilization_rate:
+  utilization_rate = (engineering_quantity / procurement_package_size) * 100
+  
+Calculate waste_cost_per_unit:
+  waste_cost_per_unit = (waste_quantity / procurement_package_size) * unit_price
+  
+Calculate annual_waste_cost (if volume known):
+  annual_waste_cost = waste_cost_per_unit * annual_volume
+```
+#### FR-3.1.4: Multi-Package Detection
+```
+IF engineering_quantity > procurement_package_size
+THEN
+  packages_required = CEILING(engineering_quantity / procurement_package_size)
+  total_package_quantity = packages_required * procurement_package_size
+  excess_quantity = total_package_quantity - engineering_quantity
+  actual_cost = packages_required * unit_price
+  cost_variance = actual_cost - standard_cost
+```
+### 3.2 Review Workflow
+#### FR-3.2.1: Review Task Creation
+**Trigger**: Conflict detected with requires_review = TRUE
+**Actions**:
+1. Create ConflictReview record with status = PENDING
+2. Assign to default procurement reviewer (configurable)
+3. Set due_date based on item priority (configurable)
+4. Send notification to assigned reviewer
+5. Block item status change to "Released" until review complete
+#### FR-3.2.2: Review Assignment Rules
+```
+Assign reviewer based on:
+  - conflict_type
+  - conflict_severity
+  - item category
+  - dollar threshold
+  - department
+Example rules:
+  IF conflict_severity = CRITICAL
+    ASSIGN TO senior_buyer AND engineering_manager
+  ELSE IF annual_waste_cost > $10,000
+    ASSIGN TO procurement_manager
+  ELSE
+    ASSIGN TO category_buyer
+```
+#### FR-3.2.3: Review Workflow States
+```
+State transitions:
+PENDING → IN_PROGRESS (reviewer starts work)
+IN_PROGRESS → APPROVED (conflict accepted)
+IN_PROGRESS → APPROVED_WITH_CONDITIONS (conditions documented)
+IN_PROGRESS → ENGINEERING_CHANGE_REQUIRED (escalate to engineering)
+IN_PROGRESS → REJECTED (cannot proceed)
+
+APPROVED → RE_EVALUATE (trigger condition met)
+```
+
+#### FR-3.2.4: Approval Requirements
+```
+Approval matrix (configurable):
+IF conflict_severity = LOW
+  REQUIRES: Category buyer approval
+  
+IF conflict_severity = MEDIUM
+  REQUIRES: Category buyer + Engineering approval
+  
+IF conflict_severity = HIGH
+  REQUIRES: Category buyer + Engineering + Finance approval
+  
+IF conflict_severity = CRITICAL
+  REQUIRES: Procurement manager + Engineering manager + Finance approval
+```
+#### FR-3.2.5: Notification Rules
+```
+Send notifications:
+ON conflict detected:
+  NOTIFY assigned reviewer
+  
+ON review assigned:
+  NOTIFY assignee
+  
+ON due date approaching (3 days):
+  NOTIFY assignee + manager
+  
+ON review status change:
+  NOTIFY item creator + assignee
+  
+ON approval required:
+  NOTIFY approvers
+  
+ON engineering change required:
+  NOTIFY engineering owner + project manager
+```
+### 3.3 Lens Switching & Perspective Views
+#### FR-3.3.1: Engineering Lens View
+**Display**:
+- Engineering part number
+- Required quantity with UOM
+- Tolerance specification
+- Drawing references
+- Technical attributes
+- Design rationale
+**Alert**: If conflict exists, show banner:
+```
+⚠️ PROCUREMENT ALERT
+Supplier constraint detected: [summary]
+[View Procurement Details] [View Conflict Analysis]
+```
+
+#### FR-3.3.2: Procurement Lens View
+**Display**:
+- Supplier information
+- Procurement UOM and packaging
+- Unit pricing
+- Lead time
+- MOQ and order multiples
+- Alternative sourcing options
+**Alert**: If conflict exists, show banner:
+```
+🚨 DIMENSIONAL CONFLICT
+Engineering requires: [qty] [uom]
+Available packaging: [pkg_size] [pkg_type]
+Action required: [Review Status]
+[Start Review] [View Engineering Spec]
+```
+
+#### FR-3.3.3: Conflict Analysis View
+**Display split-screen comparison**:
+```
+┌─────────────────────┬─────────────────────┐
+│ ENGINEERING VIEW    │ PROCUREMENT VIEW    │
+├─────────────────────┼─────────────────────┤
+│ Need: [qty] [uom]   │ Buy: [qty] [uom]    │
+│ Type: [dimension]   │ Type: [packaging]   │
+│ Precision: [tol]    │ Cannot split        │
+└─────────────────────┴─────────────────────┘
+
+IMPACT SUMMARY:
+- Waste: [qty] [uom] per unit ([%])
+- Cost impact: $[amount] per unit
+- Annual waste: $[amount] ([volume] units/yr)
+RESOLUTION STATUS: [status]
+[resolution details if approved]
+ALTERNATIVES EVALUATED:
+[list of evaluated alternatives with decisions]
+[View Full History] [Reopen Review]
+```
+#### FR-3.3.4: Manufacturing Lens View
+**Display**:
+- Fabrication process
+- Material yield/utilization
+- Scrap allowance
+- Work instructions
+- Quality requirements
+**Show**: Material efficiency metrics and waste tracking
+#### FR-3.3.5: Finance Lens View
+**Display**:
+- Standard cost breakdown
+- Actual cost with waste
+- Cost variance
+- Annual impact projection
+- ROI analysis for alternatives
+### 3.4 Search & Filtering
+#### FR-3.4.1: Conflict-Based Search
+**Filter options**:
+```
+Conflict Type:
+  [ ] None (no conflicts)
+  [ ] Any conflict
+  [✓] Dimensional conflicts only
+  [ ] Exceeds package size
+  [ ] Cut-to-length available
+  
+Conflict Severity:
+  [ ] Any
+  [✓] Medium or higher
+  [ ] High or Critical only
+  
+Review Status:
+  [✓] Pending review
+  [ ] In progress
+  [ ] Approved
+  [ ] Requires re-evaluation
+  [ ] Engineering change required
+  
+Cost Impact:
+  [ ] Any amount
+  [✓] > $10/unit
+  [ ] > $50/unit
+  [ ] > $100/unit
+  
+Annual Impact:
+  [ ] Any
+  [ ] > $5,000/year
+  [✓] > $10,000/year
+  
+Waste Threshold:
+  [ ] Any utilization
+  [✓] < 90% utilization
+  [ ] < 70% utilization
+```
+
+#### FR-3.4.2: Parametric Search
+**Search by attributes**:
+- Length range (e.g., 40-50M)
+- Specific UOM
+- Category/classification
+- Supplier
+- Date ranges
+#### FR-3.4.3: Full-Text Search
+Search across:
+- Part numbers
+- Descriptions
+- Review notes
+- Discussion threads
+- Attribute values
+### 3.5 Reporting & Analytics
+#### FR-3.5.1: Conflict Dashboard
+**KPIs to display**:
+- Total items with conflicts
+- Conflicts by severity
+- Conflicts by review status
+- Average review cycle time
+- Total annual waste cost
+- Top 10 items by waste cost
+**Charts**:
+- Conflict trend over time
+- Cost impact by category
+- Review status funnel
+- Utilization distribution
+#### FR-3.5.2: Material Waste Report
+**Show**:
+- Items ranked by waste cost
+- Waste by material type
+- Waste by product line
+- Utilization efficiency trends
+- Opportunities for design optimization
+#### FR-3.5.3: Review Performance Metrics
+**Track**:
+- Average time to review
+- Review backlog
+- Reviews by user/department
+- Approval rates
+- Re-evaluation frequency
+---
+## 4. USER INTERFACE REQUIREMENTS
+### 4.1 Item Detail Page
+#### UI-4.1.1: Page Layout
+```
+┌────────────────────────────────────────────────┐
+│ Header: Part Number | Status | Revision        │
+├────────────────────────────────────────────────┤
+│ [Engineering] [Procurement] [Conflict] [Mfg]   │ ← Lens tabs
+├────────────────────────────────────────────────┤
+│                                                │
+│ [Alert Banner if conflict exists]              │
+│                                                │
+│ [Active lens content]                          │
+│                                                │
+│                                                │
+│ [Discussion Thread]                            │
+│                                                │
+└────────────────────────────────────────────────┘
+```
+
+#### UI-4.1.2: Conflict Alert Banner
+**For DIMENSIONAL or EXCEEDS_PACKAGE conflicts**:
+```
+┌────────────────────────────────────────────────┐
+│ 🚨 DIMENSIONAL CONFLICT - [Severity]           │
+│                                                │
+│ Engineering requires: [qty] [uom]              │
+│ Procurement packages: [pkg_size] per [pkg_uom] │
+│                                                │
+│ Impact: $[waste_cost] waste per unit           │
+│ Status: [Review Status]                        │
+│                                                │
+│ [View Conflict Analysis] [Start Review]        │
+└────────────────────────────────────────────────┘
+```
+
+#### UI-4.1.3: Lens Tab Indicators
+```
+Tab label with indicator:
+[Engineering] ← No indicator (baseline)
+[Procurement 🚨] ← Conflict indicator
+[Conflict ⚠️ PENDING] ← Status indicator
+[Manufacturing] ← No indicator
+```
+
+### 4.2 Conflict Analysis Page
+#### UI-4.2.1: Split View Comparison
+**Side-by-side lens comparison** with visual connector showing the gap:
+```
+┌───────────────────┬──────────────────────┐
+│ ENGINEERING       │ PROCUREMENT          │
+│                   │                      │
+│ Required:         │ Package:             │
+│ 47.5 M            │ 50 M per spool       │
+│                   │                      │
+│ Precision:        │ Cannot split         │
+│ ± 0.1 M           │ Must buy whole EA    │
+│                   │                      │
+│ Type:             │ Type:                │
+│ Continuous length │ Discrete package     │
+└───────────────────┴──────────────────────┘
+         ↕ GAP: 2.5 M waste
+```
+
+#### UI-4.2.2: Impact Visualization
+**Bar chart showing utilization**:
+```
+Used  ████████████████████░░  95%
+      0        25        50        75       100%
+      |-------Used: 47.5M-------|--Waste: 2.5M--|
+```
+
+**Cost breakdown**:
+```
+Standard Cost:  $237.50  (47.5M × $5/M)
+Actual Cost:    $250.00  (1 spool)
+                --------
+Waste Cost:     $12.50   (2.5M × $5/M)
+                ========
+```
+#### UI-4.2.3: Resolution Section
+**Decision summary** with timeline:
+```
+RESOLUTION: Approved ✓
+Date: 2024-08-22
+By: M.Chen (Procurement)
+
+Decision: Accept standard packaging
+Rationale: Cut-to-length service 68% more expensive
+[View Full History] [Reopen Review]
+```
+#### UI-4.2.4: Alternatives Table
+```
+┌──────────────────┬────────┬──────────┬──────────┐
+│ Option           │ Cost   │ Lead Time│ Decision │
+├──────────────────┼────────┼──────────┼──────────┤
+│ Standard pkg     │ $5/M   │ 2 weeks  │ ✓ Approved│
+│ Cut-to-length    │ $8.50/M│ 6 weeks  │ ✗ Rejected│
+│ Redesign to 50M  │ +$5K   │ 2 weeks  │ ✗ Rejected│
+│ Alt supplier     │ N/A    │ N/A      │ ✗ None found│
+└──────────────────┴────────┴──────────┴──────────┘
+```
+
+### 4.3 Review Workflow UI
+#### UI-4.3.1: Review Task Card
+```
+┌────────────────────────────────────────────────┐
+│ REVIEW REQUIRED                                │
+│                                                │
+│ Item: CAB-012847-00                            │
+│ Cable Assembly, Power, 47.5M                   │
+│                                                │
+│ Conflict: DIMENSIONAL                          │
+│ Severity: MEDIUM                               │
+│                                                │
+│ Waste: $12.50/unit                             │
+│ Annual: $6,250 (500 units/yr)                  │
+│                                                │
+│ Assigned to: M.Chen                            │
+│ Due: 2024-10-30 (5 days)                       │
+│                                                │
+│ [Start Review] [View Details] [Reassign]       │
+└────────────────────────────────────────────────┘
+```
+
+#### UI-4.3.2: Review Form
+```
+┌────────────────────────────────────────────────┐
+│ CONFLICT REVIEW - CAB-012847-00                │
+├────────────────────────────────────────────────┤
+│                                                │
+│ Decision: [Dropdown]                           │
+│   ○ Accept standard packaging                  │
+│   ○ Use cut-to-length service                  │
+│   ○ Request design change                      │
+│   ○ Identify alternative supplier              │
+│   ○ Other: [text field]                        │
+│                                                │
+│ Rationale: [Text area]                         │
+│                                                │
+│ Alternatives Evaluated:                        │
+│   [+ Add Alternative]                          │
+│   ┌───────────────────────────────────────┐   │
+│   │ Option: Cut-to-length                 │   │
+│   │ Cost: $8.50/M                         │   │
+│   │ Lead time: 6 weeks                    │   │
+│   │ Decision: ○ Approved ● Rejected       │   │
+│   │ Reason: 68% cost premium not justified│   │
+│   └───────────────────────────────────────┘   │
+│                                                │
+│ Attachments: [Upload]                          │
+│   • Supplier quote - cut service.pdf          │
+│                                                │
+│ Re-evaluation trigger:                         │
+│   [✓] Volume change > 20%                      │
+│   [✓] Price change > 15%                       │
+│   [ ] Annual review                            │
+│                                                │
+│ Next review date: [Date picker]                │
+│                                                │
+│ [Submit for Approval] [Save Draft] [Cancel]    │
+└────────────────────────────────────────────────┘
+```
+
+#### UI-4.3.3: Approval Workflow
+**Sequential or parallel approval** based on severity:
+```
+Approval Chain (Medium Severity):
+1. Category Buyer (M.Chen)     ✓ Approved
+2. Engineering (J.Smith)        ⏳ Pending
+3. Finance (A.Kumar)           ⏸️ Waiting
+```
+
+### 4.4 Dashboard & Reporting UI
+#### UI-4.4.1: Conflict Dashboard
+```
+┌────────────────────────────────────────────────┐
+│ UOM CONFLICTS DASHBOARD                        │
+├────────────────────────────────────────────────┤
+│                                                │
+│ ┌─────────────┬─────────────┬─────────────┐   │
+│ │ Total       │ Pending     │ Annual Waste│   │
+│ │ Conflicts   │ Review      │ Cost        │   │
+│ │             │             │             │   │
+│ │    47       │    12       │   $127K     │   │
+│ └─────────────┴─────────────┴─────────────┘   │
+│                                                │
+│ Conflicts by Severity:                         │
+│   Critical: ████ 4                             │
+│   High:     ████████ 8                         │
+│   Medium:   ████████████████ 18                │
+│   Low:      █████████████████████████ 17       │
+│                                                │
+│ Review Status:                                 │
+│   [Pie chart or funnel]                        │
+│                                                │
+│ Top Conflicts by Cost:                         │
+│   [Table with top 10]                          │
+│                                                │
+│ [View All Conflicts] [Export Report]           │
+└────────────────────────────────────────────────┘
+```
+
+#### UI-4.4.2: My Tasks View
+```
+┌────────────────────────────────────────────────┐
+│ MY REVIEWS (12 pending)                        │
+├────────────────────────────────────────────────┤
+│                                                │
+│ ⚠️ OVERDUE (2)                                 │
+│   CAB-012847-00 | Due 3 days ago | $6.2K/yr   │
+│   TUBE-SS-2.3M  | Due today      | $18K/yr    │
+│                                                │
+│ DUE THIS WEEK (5)                              │
+│   [List with sort/filter options]             │
+│                                                │
+│ UPCOMING (5)                                   │
+│   [Collapsed, expandable]                     │
+│                                                │
+└────────────────────────────────────────────────┘
+```
+
+### 4.5 Discussion Thread UI
+#### UI-4.5.1: Thread View
+```
+┌────────────────────────────────────────────────┐
+│ DISCUSSION                                     │
+├────────────────────────────────────────────────┤
+│                                                │
+│ 💬 M.Chen (Procurement) - Oct 18, 2:15 PM     │
+│    @Engineering Can't source 52.5M. Supplier   │
+│    max is 50M spools. Need guidance.           │
+│                                                │
+│    └─ 💬 J.Smith (Engineering) - Oct 18, 3:30 PM│
+│        This is the measured distance. Can we  │
+│        review alternative routing?            │
+│                                                │
+│        └─ 💬 K.Williams (Mfg) - Oct 18, 4:00 PM│
+│            We could use a connector at 50M if │
+│            that helps?                        │
+│                                                │
+│ 💬 J.Smith (Engineering) - Oct 18, 6:15 PM    │
+│    Good news - lower channel routing = 49.8M. │
+│    Preparing ECO now.                          │
+│                                                │
+│ ✓ Resolution: Redesign approved               │
+│   Status changed to: Engineering Change       │
+│                                                │
+│ [Type your message...] [@mention] [📎 Attach] │
+└────────────────────────────────────────────────┘
+```
+
+---
+## 5. BUSINESS LOGIC & RULES
+### 5.1 Validation Rules
+#### BL-5.1.1: Item Creation Validation
+```
+ON item save:
+  IF make_buy_code = MAKE
+    REQUIRE source_item_id or procurement_spec
+    
+  IF dimension_type = CONTINUOUS
+    REQUIRE engineering_tolerance
+    
+  IF procurement_uom defined
+    VALIDATE uom_code exists in reference table
+    
+  IF conflict detected
+    PREVENT status = Released until review approved
+```
+#### BL-5.1.2: Review Validation
+```
+ON review submit:
+  REQUIRE decision selected
+  REQUIRE rationale (min 20 characters)
+  
+  IF decision = Accept_Standard_Packaging
+    REQUIRE waste_cost_per_unit calculated
+    
+  IF alternatives_evaluated empty
+    WARN "No alternatives documented - is this intentional?"
+    
+  IF conflict_severity = HIGH or CRITICAL
+    REQUIRE manager approval
+```
+### 5.2 Calculation Rules
+#### BL-5.2.1: Auto-Calculate on Save
+```
+CALCULATE on item update:
+  - utilization_rate
+  - waste_quantity
+  - waste_cost_per_unit
+  - packages_required (if exceeds package size)
+  - conflict_severity
+  - annual_waste_cost (if volume known)
+```
+#### BL-5.2.2: Re-calculation Triggers
+```
+RECALCULATE conflict metrics when:
+  - engineering_quantity changes
+  - procurement_package_size changes
+  - unit_price changes
+  - annual_volume changes
+  
+UPDATE conflict_last_calculated timestamp
+```
+### 5.3 Notification Rules
+#### BL-5.3.1: Real-Time Notifications
+```
+SEND notification when:
+  - Conflict detected → assigned reviewer
+  - Review assigned → assignee
+  - Review due soon → assignee + manager (3 days before)
+  - Review overdue → assignee + manager (daily)
+  - Approval required → approver
+  - Status changed → item owner + stakeholders
+  - @mentioned in discussion → mentioned user
+```
+
+#### BL-5.3.2: Digest Notifications
+```
+SEND daily digest:
+  - My pending reviews (count + top 3 by priority)
+  - Reviews I'm approving (count)
+  - Items I'm watching (new activity count)
+  
+SEND weekly digest:
+  - Conflict metrics summary
+  - Newly detected conflicts
+  - Recently resolved conflicts
+  - Overdue reviews
+```
+### 5.4 Access Control
+#### BL-5.4.1: Role-Based Permissions
+```
+ROLES:
+  - Engineering (can create items, view all lenses)
+  - Procurement (can review conflicts, edit procurement data)
+  - Manufacturing (can view, comment)
+  - Finance (can view, approve high-impact reviews)
+  - Manager (can reassign, override)
+  - Admin (full access)
+PERMISSIONS:
+  Item.Create: Engineering
+  Item.Edit_Engineering: Engineering
+  Item.Edit_Procurement: Procurement
+  Item.Release: Engineering + Procurement (both required if conflict)
+  Review.Start: Procurement
+  Review.Approve: Based on severity matrix
+  Discussion.Post: All authenticated users
+```
+#### BL-5.4.2: Data Visibility
+```
+All items: Visible to all authenticated users
+Conflict reviews: Visible to:
+  - Item owner
+  - Assigned reviewer
+  - Approvers
+  - Department members (configurable)
+  
+Sensitive notes: Visible to reviewers + managers only
+```
+---
+## 6. INTEGRATION REQUIREMENTS
+### 6.1 ERP/PLM Integration
+#### INT-6.1.1: Item Master Sync
+```
+SYNC from ERP/PLM:
+  - Part number, description, status
+  - Engineering attributes
+  - Make/buy code
+  - Drawing references
+  - Cost data
+  
+SYNC to ERP/PLM:
+  - Conflict status
+  - Review decisions
+  - UOM conflict flags
+```
+#### INT-6.1.2: BOM Integration
+```
+IMPORT from BOM:
+  - Parent-child relationships
+  - Quantity per assembly
+  - Where-used information
+  
+USE for:
+  - Annual volume estimation
+  - Impact propagation (design change affects...)
+```
+#### INT-6.1.3: Supplier Data
+```
+IMPORT from supplier catalog/ERP:
+  - Supplier part numbers
+  - Packaging information
+  - Pricing
+  - Lead times
+  - MOQ/order multiples
+```
+### 6.2 Notification Integration
+#### INT-6.2.1: Email Notifications
+```
+SEND via email:
+  - Review assignments
+  - Approval requests
+  - Overdue alerts
+  - Daily/weekly digests
+  
+INCLUDE:
+  - Direct link to item/review
+  - Summary of key info
+  - Required action
+```
+#### INT-6.2.2: Collaboration Tools
+```
+INTEGRATE with:
+  - Slack/Teams for real-time alerts
+  - Calendar for review due dates
+  - Document management for attachments
+```
+### 6.3 Reporting Integration
+#### INT-6.3.1: BI Tools
+```
+EXPORT to BI tools:
+  - Conflict metrics
+  - Review performance
+  - Waste cost analysis
+  - Utilization trends
+  
+FORMAT: CSV, API, direct connection
+
+7. NON-FUNCTIONAL REQUIREMENTS
+7.1 Performance
+• Conflict detection: < 2 seconds on item save
+• Lens switching: < 500ms
+• Search results: < 3 seconds for 10,000+ items
+• Dashboard load: < 5 seconds
+• Support 10,000+ items with conflicts
+• Support 100+ concurrent users
+7.2 Usability
+• Mobile-responsive design
+• Keyboard shortcuts for power users
+• Inline help/tooltips
+• Undo/redo for edits
+• Auto-save drafts
+• Accessibility compliance (WCAG 2.1 AA)
+7.3 Reliability
+• 99.5% uptime
+• Automated backups (daily)
+• Data recovery procedures
+• Graceful degradation if integrations fail
+7.4 Security
+• Authentication required
+• Role-based access control
+• Audit logging of all changes
+• Secure API endpoints
+• Data encryption at rest and in transit
+
+8. IMPLEMENTATION PHASES
+Phase 1: Core Data Model & Detection (MVP)
+• Item entity with eng/proc perspectives
+• Basic conflict detection logic
+• Manual review workflow (no automation)
+• Single lens view
+• Basic reporting
+Phase 2: Lens Switching & Collaboration
+• Multi-lens UI with tab switching
+• Conflict analysis page
+• Discussion threads
+• @mentions and notifications
+• Enhanced search/filtering
+Phase 3: Workflow Automation
+• Automated review assignment
+• Approval workflows
+• Notification rules
+• Integration with ERP/PLM
+• Dashboard and analytics
+Phase 4: Advanced Features
+• Predictive conflict detection
+• ML-based alternative suggestions
+• Advanced reporting and BI
+• Mobile app
+• API for third-party integrations
+
+9. SUCCESS METRICS
+9.1 Adoption Metrics
+• % of items with procurement data populated
+• % of conflicts reviewed within SLA
+• Active users by role
+• Average session duration
+9.2 Efficiency Metrics
+• Average review cycle time (target: < 5 days)
+• % of conflicts resolved without escalation
+• Reduction in emergency design changes
+• Time saved in cross-functional meetings
+9.3 Business Impact Metrics
+• Total material waste cost visibility
+• Material utilization improvement (target: +5%)
+• Design changes due to procurement constraints (trend down)
+• Cost savings from alternative sourcing
+• Reduction in procurement lead time issues
+
+10. OPEN QUESTIONS & DECISIONS NEEDED
+1. Data Source: Which system is source of truth for item master? ERP or Shared Lens?
+2. Review SLA: What are appropriate due dates by severity level?
+3. Approval Thresholds: What dollar amounts trigger additional approvals?
+4. Integration Approach: Real-time sync or batch? API or file-based?
+5. Historical Data: How to handle items created before Shared Lens? Backfill or prospective only?
+6. Multi-currency: How to handle global operations with different currencies?
+7. User Provisioning: SSO? LDAP? Manual user management?
+8. Customization: Which fields/workflows need to be configurable by customer?
+
+
+
+
+From <https://claude.ai/chat/87df9b72-591f-42f3-87b5-971e095472b7> 
