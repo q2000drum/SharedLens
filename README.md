@@ -1,18 +1,19 @@
-# SharedLens - Classification & Attribute Management System
+# SharedLens - UOM Conflict Management System
 
-A comprehensive enterprise solution for managing product classification schemas and attribute definitions across the product value chain.
+A comprehensive enterprise solution for managing Unit of Measure conflicts between engineering specifications and procurement constraints.
 
 ## Overview
 
-SharedLens implements the "Shared Lens Concept" - a strategic framework that eliminates organizational and data silos by integrating Static (Engineering) Attributes and Transactional (Business) Attributes into a unified knowledge base.
+SharedLens implements the "Shared Lens Concept" - a strategic framework that provides cross-functional visibility into the gap between engineering requirements and procurement reality. The system transforms UOM conflicts from hidden friction into visible, manageable trade-offs through multi-perspective item representation.
 
 ### Key Features
 
-- **Enterprise Attribute Registry**: Centralized management of all product attributes with governance metadata
-- **Classification Schema Management**: Hierarchical commodity and category classification system
-- **Progress Tracking**: Real-time metrics and dashboards for classification development
-- **Multi-System Integration**: Designed to integrate with PLM (Windchill), ERP (Oracle), PIM, and other enterprise systems
-- **Data Governance**: Built-in data quality rules, audit logging, and stewardship tracking
+- **UOM Conflict Detection**: Automatic identification of dimensional mismatches between engineering specs and supplier packaging
+- **Multi-Lens Item Views**: Switch between Engineering, Procurement, Manufacturing, and Finance perspectives of the same item
+- **Impact Analysis**: Real-time calculation of waste costs, utilization rates, and annual impact projections
+- **Review Workflow**: Collaborative decision-making process with approval chains and alternatives evaluation
+- **Cost Visibility**: Track material waste impact across the organization with detailed financial metrics
+- **Cross-Functional Collaboration**: Discussion threads and notifications to bridge engineering and procurement teams
 
 ## Tech Stack
 
@@ -101,7 +102,10 @@ For production deployment, you can use:
 ```
 SharedLens/
 ├── app/                          # Next.js App Router pages
-│   ├── page.tsx                  # Dashboard (metrics & overview)
+│   ├── page.tsx                  # Main Dashboard (Classification & Attributes)
+│   ├── uom-dashboard/            # UOM Conflict Dashboard
+│   ├── conflicts/                # UOM conflicts detailed list view
+│   ├── items/[id]/               # Item detail with lens switching
 │   ├── attributes/               # Attribute registry
 │   ├── classification/           # Classification schema
 │   └── settings/                 # System settings
@@ -114,21 +118,54 @@ SharedLens/
 │   │   └── index.ts              # Database client
 │   ├── types/                    # TypeScript type definitions
 │   └── utils.ts                  # Utility functions
-└── docs/                         # Project documentation
+└── docs/
+    └── UOM/                      # UOM conflict documentation
+        ├── UOM Conflict Management Feature.md
+        └── Unit of Measurement - Study
 ```
 
-## Current Status: POC (v0.1.0)
+## Current Status: POC (v0.2.0) - Dual Dashboard
 
-This is a Proof of Concept implementation with:
+This is a Proof of Concept implementation with two main areas:
 
-- ✅ Core UI components and navigation
-- ✅ Database schema design
-- ✅ Mock data for demonstration
-- ✅ Dashboard with metrics
-- ✅ Attribute registry interface
-- ✅ Classification schema display
-- 🔄 Database integration (in progress)
+### Original Dashboard (/)
+- ✅ Commodity classification tracking
+- ✅ Component classification metrics
+- ✅ Attribute completion rates
+- ✅ Classification development status
+
+### UOM Conflict Management (/uom-dashboard)
+- ✅ UOM conflict dashboard with key metrics
+- ✅ Clickable metrics to access detailed conflict views
+- ✅ Conflicts list view with detailed impact analysis
+- ✅ Multi-lens item detail view (Engineering, Procurement, Manufacturing, Conflict Analysis)
+- ✅ Conflict severity classification (Critical, High, Medium, Low)
+- ✅ Utilization rate and waste cost calculations
+- ✅ Alternatives evaluation framework
+- ✅ Mock data based on cable/wire scenarios from documentation
+- 🔄 Review workflow implementation (planned)
+- 🔄 Discussion threads (planned)
+- 🔄 Database integration (planned)
 - 🔄 External system integration (planned)
+
+## Navigation Guide
+
+The application has two main workflows:
+
+### 1. Classification & Attributes Workflow
+- **Dashboard** (`/`) - Overview of commodity and component classification progress
+- **Attributes** (`/attributes`) - Attribute registry management
+- **Classification** (`/classification`) - Classification schema management
+
+### 2. UOM Conflict Management Workflow
+- **UOM Dashboard** (`/uom-dashboard`) - Overview of UOM conflicts with key metrics
+  - Click on "Active Conflicts" metric card to jump to conflicts list
+  - Click "View All UOM Conflicts" button at bottom
+- **UOM Conflicts** (`/conflicts`) - Detailed list of all UOM conflicts
+  - View conflict details, impact analysis, and review status
+  - Click "View Details" to see individual item
+- **Item Detail** (`/items/[id]`) - Multi-lens view of individual items
+  - Switch between Engineering, Procurement, Conflict Analysis, and Manufacturing views
 
 ## Available Scripts
 
@@ -140,13 +177,34 @@ This is a Proof of Concept implementation with:
 - `npm run db:migrate`: Run database migrations
 - `npm run db:studio`: Open Drizzle Studio (database GUI)
 
+## UOM Conflict Scenarios
+
+The POC demonstrates several real-world UOM conflict scenarios:
+
+### Example 1: Cable Assembly (Dimensional Conflict - Medium)
+- **Engineering**: Requires 47.5M of cable
+- **Procurement**: Supplier sells in 50M spools only
+- **Impact**: 2.5M waste per unit, 95% utilization, $12.50 waste cost
+- **Annual Impact**: $6,250 (500 units/year)
+
+### Example 2: Stainless Steel Tube (Exceeds Package - High)
+- **Engineering**: Requires 2.3M length
+- **Procurement**: Supplier sells in 2M lengths
+- **Impact**: Must buy 2 packages, 1.7M excess, 57.5% utilization
+- **Annual Impact**: $19,125 (250 units/year)
+
+### Example 3: Fiber Optic Cable (Exceeds Package - Critical)
+- **Engineering**: Requires 75M
+- **Procurement**: Supplier sells in 50M spools
+- **Impact**: Must buy 2 spools, 25M excess, $125 waste per unit
+- **Annual Impact**: $46,875 (150 units/year)
+
 ## Documentation
 
-See the `docs/` directory for additional documentation:
+See the `docs/UOM/` directory for detailed documentation:
 
-- `SharedLens.md`: Executive summary and departmental applications
-- `SharedLens-Requirements.md`: Detailed requirements and attribute framework
-- `Data Map.pdf`: System architecture and data flow diagrams
+- `UOM Conflict Management Feature.md`: Complete feature requirements and data model
+- `Unit of Measurement - Study`: Engineering vs Procurement perspectives analysis
 
 ## License
 
